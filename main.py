@@ -49,16 +49,15 @@ def file_maker():
         logging.error(f'{er} in file_maker')
 
 
-def file_reader():
+def file_reader(filename_local):
     try:
         if os.path.isfile('src/temp.srt'):
             os.remove('src/temp.srt')
-        filename = sg.PopupGetFile('Select the video file')
-        if filename.lower().endswith(('.mkv', '.mp4', '.avi', '.vob', '.mov')):
-            os.system(f'ffmpeg -i "{filename}" "src/temp.srt"')
-        elif filename.lower().endswith(('.srt', '.sub', '.vtt', 'txt', 'sbv', 'ttml')):
-            shutil.copy(filename, 'src/temp.srt')
-        return filename, [line.strip() for line in open(f'src/temp.srt', 'r', encoding='utf')]
+        if filename_local.lower().endswith(('.mkv', '.mp4', '.avi', '.vob', '.mov')):
+            os.system(f'ffmpeg -i "{filename_local}" "src/temp.srt"')
+        elif filename_local.lower().endswith(('.srt', '.sub', '.vtt', 'txt', 'sbv', 'ttml')):
+            shutil.copy(filename_local, 'src/temp.srt')
+        return filename_local, [line.strip() for line in open(f'src/temp.srt', 'r', encoding='utf')]
     except Exception as er:
         logging.error(f'{er} in fun file_reader()')
         sg.PopupError('cann\'t open file')
@@ -76,22 +75,29 @@ head_layout = [
         sg.Text('Welcome to Subtitle Man')
     ],
     [
-        sg.Text('Click here to import file'),
-        sg.Button('Import File', key='-IMPORT-')
+        sg.Text('Click here to import file')
+    ],
+    [
+        sg.Text('Enter File Location', key='-FILE LOCATION-')
+    ],
+    [
+        sg.FileBrowse('Import File', key='-IMPORT-', enable_events=True)
     ]
 ]
 make_file_layout = [
     [
-        sg.Text('Click here to make subtitle/any text file'),
+        sg.Text('Click here to make subtitle/any text file')
+    ],
+    [
         sg.Button('Make File', key='-MAKE FILE-')
     ]
 ]
 exclude_word_layout = [
     [
-        sg.Text('Exclude word from Searching')
+        sg.Text('Won\'t write this word to file')
     ],
     [
-        sg.Input(default_text='Enter a word', key='-WORD FOR EXCLUDE-'),
+        sg.Input(default_text='Enter a word', key='-WORD FOR EXCLUDE-', size=(20, 1)),
     ],
     [
         sg.Button('Exclude', key='-EXCLUDE-')
@@ -99,10 +105,10 @@ exclude_word_layout = [
 ]
 include_word_layout = [
     [
-        sg.Text('Include word for Searching')
+        sg.Text('Will write this word to file')
     ],
     [
-        sg.Input(default_text='Enter a word', key='-WORD FOR INCLUDE-'),
+        sg.Input(default_text='Enter a word', key='-WORD FOR INCLUDE-', size=(20, 1)),
     ],
     [
         sg.Button('Include', key='-ADD TO SEARCH-')
@@ -113,7 +119,7 @@ add_to_dictionary_layout = [
         sg.Text('Add word and definition in dictionary')
     ],
     [
-        sg.Input(default_text='Enter a word', key='-WORD FOR DICT-')
+        sg.Input(default_text='Enter a word', key='-WORD FOR DICT-', size=(20, 1))
     ],
     [
         sg.Input(default_text='Enter definition', key='-MEANING FOR DICT-')
@@ -131,9 +137,7 @@ layout = [
         sg.Frame('Makefile', layout=make_file_layout, element_justification='c')
     ],
     [
-        sg.Frame('Exclude Word', layout=exclude_word_layout, element_justification='c')
-    ],
-    [
+        sg.Frame('Exclude Word', layout=exclude_word_layout, element_justification='c'),
         sg.Frame('Include Word', layout=include_word_layout, element_justification='c')
     ],
     [
@@ -153,14 +157,15 @@ while True:
         break
     if event == '-IMPORT-':
         try:
-            filename, file = file_reader()
+            filename, file = file_reader(values['-IMPORT-'])
+            window['-FILE LOCATION-'].update(filename)
         except Exception as t:
             logging.error(t)
 
     if event == '-MAKE FILE-':
         if file:
             new_file = file_maker()
-            with open(f'{filename}_subtitle-man.srt', 'w') as f:
+            with open(f'{filename}_subtitle-man.srt', mode='w', encoding='utf-8-sig') as f:
                 for row in new_file:
                     f.write(row + '\n')
 

@@ -27,14 +27,14 @@ def get_common_word():
 
 
 # get definition
-def get_meaning(word):
+def get_meaning(word, next_iter=True):
     cursor = conn_dict.cursor()
     meaning = cursor.execute(f'select definition from words where word="{word.title()}"')
     meanings = []
     for i in meaning.fetchall():
         i = i[0]
-        if len(i.split()) == 2 and i.split()[0].lower() == 'of':
-            meanings.append(get_meaning(i.split()[1]))
+        if next_iter and len(i.split()) == 2 and i.split()[0].lower() == 'of':
+            meanings.append(get_meaning(i.split()[1], False))
         else:
             i = i.split(';')
             meanings.append(i[0])
@@ -73,7 +73,7 @@ def add_to_exclude(word):
 # remove from exclude for showing in file
 def remove_from_exclude(word):
     try:
-        conn_common_word.execute(f'delete from words where word="{word.lower}"')
+        conn_common_word.execute(f'delete from words where word="{word.lower()}"')
         conn_common_word.commit()
     except Exception as ex:
         logging.error(f'{ex} in remove from dict')

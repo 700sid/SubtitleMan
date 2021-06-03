@@ -2587,3 +2587,10 @@ ERROR - 2021-06-02 23:34:28,243 - root - 'WORD FOR DICT' happen in event '-ADD T
 ERROR - 2021-06-03 11:22:43,062 - root - Incorrect number of bindings supplied. The current statement uses 1, and there are 6 supplied. in add_to_search 
 ERROR - 2021-06-03 12:27:56,954 - root - 'NoneType' object has no attribute 'lower' in fun file_reader() 
 ERROR - 2021-06-03 14:08:25,437 - root - 'NoneType' object has no attribute 'lower' in fun file_reader() 
+ERROR - 2021-06-03 22:03:27,343 - root - 'NoneType' object has no attribute 'lower' in fun file_reader() 
+INFO - 2021-06-03 22:13:34,903 - root - chocolate already in there :- in fun add_to_search 
+INFO - 2021-06-03 22:20:06,923 - root - chocolate already in there :- in fun add_to_search 
+ERROR - 2021-06-03 22:55:40,828 - root - in word eaten maximum recursion depth exceeded in comparison 
+ERROR - 2021-06-03 22:56:31,227 - root - in word eaten maximum recursion depth exceeded in comparison 
+ERROR - 2021-06-03 22:57:40,275 - root - in word eaten maximum recursion depth exceeded in comparison 
+ERROR - 2021-06-03 23:13:37,234 - root - [Errno 2] No such file or directory: 'src/temp.srt' in fun file_reader() 
