@@ -70,44 +70,47 @@ file = None
 lang = enchant.Dict("en_US")
 common_words = get_common_word()
 
-
-layout = [
+# layouts
+head_layout = [
     [
         sg.Text('Welcome to Subtitle Man')
     ],
     [
         sg.Text('Click here to import file'),
         sg.Button('Import File', key='-IMPORT-')
-    ],
+    ]
+]
+make_file_layout = [
     [
         sg.Text('Click here to make subtitle/any text file'),
         sg.Button('Make File', key='-MAKE FILE-')
-    ],
-    [
-        sg.HSeparator()
-    ],
+    ]
+]
+exclude_word_layout = [
     [
         sg.Text('Exclude word from Searching')
     ],
     [
         sg.Input(default_text='Enter a word', key='-WORD FOR EXCLUDE-'),
-        sg.Submit(key='-EXCLUDE-')
     ],
     [
-        sg.HSeparator()
-    ],
+        sg.Button('Exclude', key='-EXCLUDE-')
+    ]
+]
+include_word_layout = [
     [
         sg.Text('Include word for Searching')
     ],
     [
         sg.Input(default_text='Enter a word', key='-WORD FOR INCLUDE-'),
-        sg.Submit(key='-ADD TO SEARCH-')
     ],
     [
-        sg.HSeparator()
-    ],
+        sg.Button('Include', key='-ADD TO SEARCH-')
+    ]
+]
+add_to_dictionary_layout = [
     [
-        sg.Text('Add in dictionary')
+        sg.Text('Add word and definition in dictionary')
     ],
     [
         sg.Input(default_text='Enter a word', key='-WORD FOR DICT-')
@@ -116,14 +119,32 @@ layout = [
         sg.Input(default_text='Enter definition', key='-MEANING FOR DICT-')
     ],
     [
-        sg.Submit(key='-ADD TO DICT-')
+        sg.Button('Add', key='-ADD TO DICT-')
+    ]
+]
+
+layout = [
+    [
+        sg.Frame('Hello', layout=head_layout, element_justification='c')
+    ],
+    [
+        sg.Frame('Makefile', layout=make_file_layout, element_justification='c')
+    ],
+    [
+        sg.Frame('Exclude Word', layout=exclude_word_layout, element_justification='c')
+    ],
+    [
+        sg.Frame('Include Word', layout=include_word_layout, element_justification='c')
+    ],
+    [
+        sg.Frame('Add to Dictionary', layout=add_to_dictionary_layout, element_justification='c')
     ]
 ]
 
 logging.basicConfig(filename="src/info.log", level=logging.NOTSET,
                     format='%(levelname)s - %(asctime)s - %(name)s - %(message)s ')
 
-window = sg.Window(title='Subtitle Man', layout=layout, element_justification='c')
+window = sg.Window(title='Subtitle Man', layout=layout, element_justification='c', margins=(10, 10))
 
 while True:
     event, values = window.read()
