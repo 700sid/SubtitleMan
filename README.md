@@ -1,2 +1,5 @@
 # SubtitleMan
- read text file and write the meaning of it in front of it so make you life easier with engish
+ Read text file and write the meaning of hard words in front of it so make you life easier with english
+ 
+<br />
+<img src="image/demo.gif">
