@@ -4,7 +4,6 @@ import os
 import pathlib
 import shutil
 import PyDictionary
-import requests
 
 
 # default var
@@ -30,20 +29,40 @@ def get_common_word():
 
 
 # get definition
-def get_meaning(word, next_iter=True):
+def get_meaning(word, next_iter=True, second_chance=True):
     cursor = conn_dict.cursor()
     meaning = cursor.execute(f'select definition from words where word="{word.title()}"')
-    meanings = []
+    meanings = set()
     for i in meaning.fetchall():
         i = i[0]
         if next_iter and len(i.split()) == 2 and i.split()[0].lower() == 'of':
-            meanings.append(get_meaning(i.split()[1], False))
+            niter = set(get_meaning(i.split()[1], False).split(';'))
+            meanings = meanings | niter
         else:
             i = i.split(';')
-            meanings.append(i[0])
-    ans = '; '.join(meanings[:3])
+            meanings.add(i[0])
+    ans = '; '.join(list(meanings)[:3]) or 'Nan'
+    if ans == 'Nan' and second_chance:
+        ans = second_try_get_meaning(word)
+    return ans or 'Nan'
 
-    return ans or 'Not in Dictionary, Please add'
+
+# trying by changing meaning
+def second_try_get_meaning(word):
+    if word.endswith('ing'):
+        return get_meaning(word[:-3], second_chance=False)
+    elif word.endswith('s'):
+        return get_meaning(word[:-1], second_chance=False)
+    elif word.endswith('es'):
+        return get_meaning(word[:-2], second_chance=False)
+    elif word.endswith('r'):
+        return get_meaning(word[:-1], second_chance=False)
+    elif word.endswith('ly'):
+        return get_meaning(word[:-2], second_chance=False)
+    elif word.endswith('ed'):
+        return get_meaning(word[:-2], second_chance=False)
+    else:
+        return 'Nan'
 
 
 # get definition from PyDictionary slow but effective
@@ -92,4 +111,4 @@ if __name__ == '__main__':
     # reset_common_word()
     # Zythum A kind of ancient malt beverage; a liquor made from malt\n and wheat.
     # update_dictionary('chocolates', 'of chocolate')
-    print(get_meaning('chocolate'))
+    print(get_meaning('eat'))
