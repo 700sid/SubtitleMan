@@ -3,12 +3,15 @@ import sqlite3
 import os
 import pathlib
 import shutil
+import PyDictionary
+import requests
 
 
 # default var
 path_of_this_file = pathlib.Path(__file__).parent
 conn_dict = sqlite3.connect(f'{path_of_this_file}/dictionary.db')
 conn_common_word = sqlite3.connect(f'{path_of_this_file}/ExcludedWords.db')
+dictionary = PyDictionary.PyDictionary()
 
 
 # start afresh
@@ -41,6 +44,11 @@ def get_meaning(word, next_iter=True):
     ans = '; '.join(meanings[:3])
 
     return ans or 'Not in Dictionary, Please add'
+
+
+# get definition from PyDictionary slow but effective
+def get_meaning_pydict(word):
+    return list(dictionary.meaning(word).values())[0][:1]
 
 
 # insert word

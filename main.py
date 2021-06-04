@@ -4,7 +4,7 @@ import logging
 import re
 import enchant
 import shutil
-from src.ExcludedWord import get_common_word, get_meaning, update_dictionary, add_to_exclude, remove_from_exclude
+from src.ExcludedWord import *
 
 
 def update_line(line):
@@ -14,7 +14,10 @@ def update_line(line):
         if word.isalpha():
             if lang.check(word) and word.lower() not in common_words:
                 try:
-                    meaning = get_meaning(word)
+                    if values['-DICT MODE-'] == 'Online Dictionary (slow but effective)':
+                        meaning = get_meaning_pydict(word)
+                    elif values['-DICT MODE-'] == 'Inbuilt dictionary (Fast but less effective)':
+                        meaning = get_meaning(word)
                     if meaning:
                         new_word = f'{word}(: {meaning})'
                     else:
@@ -87,6 +90,10 @@ head_layout = [
 make_file_layout = [
     [
         sg.Text('Click here to make subtitle/any text file')
+    ],
+    [
+        sg.InputOptionMenu(('Inbuilt dictionary (Fast but less effective)', 'Online Dictionary (slow but effective)'),
+                           key='-DICT MODE-')
     ],
     [
         sg.Button('Make File', key='-MAKE FILE-')
@@ -163,14 +170,14 @@ while True:
             logging.error(t)
 
     if event == '-MAKE FILE-':
-        if file:
+        if file and values['-DICT MODE-']:
             new_file = file_maker()
             with open(f'{filename}_subtitle-man.srt', mode='w', encoding='utf-8-sig') as f:
                 for row in new_file:
                     f.write(row + '\n')
 
         else:
-            sg.PopupError('Please select a valid file')
+            sg.PopupError('Please select a valid file or dict mode')
 
     if event == '-ADD TO DICT-':
         try:
