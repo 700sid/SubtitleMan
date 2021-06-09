@@ -3807,3 +3807,11 @@ DEBUG - 2021-06-04 11:48:14,304 - urllib3.connectionpool - http://wordnetweb.pri
 DEBUG - 2021-06-04 11:48:14,327 - urllib3.connectionpool - Starting new HTTP connection (1): wordnetweb.princeton.edu:80 
 DEBUG - 2021-06-04 11:48:15,110 - urllib3.connectionpool - http://wordnetweb.princeton.edu:80 "GET /perl/webwn?s=Neutrons HTTP/1.1" 200 None 
 DEBUG - 2021-06-04 11:48:15,154 - urllib3.connectionpool - Starting new HTTP connection (1): wordnetweb.princeton.edu:80 
+DEBUG - 2021-06-09 15:20:36,497 - urllib3.connectionpool - Starting new HTTP connection (1): wordnetweb.princeton.edu:80 
+DEBUG - 2021-06-09 15:20:38,075 - urllib3.connectionpool - http://wordnetweb.princeton.edu:80 "GET /perl/webwn?s=RUN HTTP/1.1" 200 None 
+DEBUG - 2021-06-09 23:19:11,041 - urllib3.connectionpool - Starting new HTTP connection (1): wordnetweb.princeton.edu:80 
+DEBUG - 2021-06-09 23:19:12,682 - urllib3.connectionpool - http://wordnetweb.princeton.edu:80 "GET /perl/webwn?s=chocolate HTTP/1.1" 200 None 
+ERROR - 2021-06-09 23:22:45,795 - root - '-IMPORT-' 
+ERROR - 2021-06-09 23:45:12,118 - root - '-IMPORT-' 
+ERROR - 2021-06-09 23:45:26,178 - root - '-IMPORT-' 
+ERROR - 2021-06-09 23:46:43,132 - root - '-IMPORT-' 

@@ -45,7 +45,7 @@ def file_maker():
             else:
                 new_line = update_line(line)
                 new_srt.append(new_line)
-            sg.OneLineProgressMeter('Making', i + 1, size)
+            sg.OneLineProgressMeter('Making', i + 1, size, no_titlebar=True, grab_anywhere=True)
             i += 1
         return new_srt
     except Exception as er:
@@ -71,6 +71,9 @@ def file_reader(filename_local):
 file = None
 lang = enchant.Dict("en_US")
 common_words = get_common_word()
+sg.theme('DarkGrey14')
+logging.basicConfig(filename="src/info.log", level=logging.NOTSET,
+                    format='%(levelname)s - %(asctime)s - %(name)s - %(message)s ')
 
 # layouts
 head_layout = [
@@ -81,10 +84,11 @@ head_layout = [
         sg.Text('Click here to import file')
     ],
     [
-        sg.Text('Enter File Location', key='-FILE LOCATION-')
+        sg.Input('Enter File Location', key='-FILE LOCATION-', size=(40, 1)),
+        sg.FileBrowse('Browse')
     ],
     [
-        sg.FileBrowse('Import File', key='-IMPORT-', enable_events=True)
+        sg.OK(key='-IMPORT-')
     ]
 ]
 make_file_layout = [
@@ -99,27 +103,17 @@ make_file_layout = [
         sg.Button('Make File', key='-MAKE FILE-')
     ]
 ]
-exclude_word_layout = [
+include_exclude_word_layout = [
     [
-        sg.Text('Won\'t write this word to file')
+        sg.Text('Write this word to file')
     ],
     [
-        sg.Input(default_text='Enter a word', key='-WORD FOR EXCLUDE-', size=(20, 1)),
+        sg.Input(default_text='Enter a word', key='-WORD COMMON-'),
     ],
     [
-        sg.Button('Exclude', key='-EXCLUDE-')
-    ]
-]
-include_word_layout = [
-    [
-        sg.Text('Will write this word to file')
+        sg.Button('Include', key='-ADD TO SEARCH-', button_color='green4'),
+        sg.Button('Exclude', key='-EXCLUDE-', button_color='firebrick4')
     ],
-    [
-        sg.Input(default_text='Enter a word', key='-WORD FOR INCLUDE-', size=(20, 1)),
-    ],
-    [
-        sg.Button('Include', key='-ADD TO SEARCH-')
-    ]
 ]
 add_to_dictionary_layout = [
     [
@@ -135,6 +129,21 @@ add_to_dictionary_layout = [
         sg.Button('Add', key='-ADD TO DICT-')
     ]
 ]
+dictionary_layout = [
+    [
+        sg.Input(default_text='Enter Word', key='-DICTIONARY SEARCH WORD-')
+    ],
+    [
+        sg.InputOptionMenu(('Inbuilt dictionary (Offline)', 'Online Dictionary'),
+                           key='-DICT SEARCH MODE-')
+    ],
+    [
+        sg.Button('Define', key='-DICTIONARY SEARCH-')
+    ],
+    [
+        sg.Text('', visible=False, key='-DICTIONARY MEANING-')
+    ]
+]
 
 layout = [
     [
@@ -144,28 +153,26 @@ layout = [
         sg.Frame('Makefile', layout=make_file_layout, element_justification='c')
     ],
     [
-        sg.Frame('Exclude Word', layout=exclude_word_layout, element_justification='c'),
-        sg.Frame('Include Word', layout=include_word_layout, element_justification='c')
+        sg.Frame('Exclude Word', layout=include_exclude_word_layout, element_justification='c')
     ],
     [
         sg.Frame('Add to Dictionary', layout=add_to_dictionary_layout, element_justification='c')
+    ],
+    [
+        sg.Frame('Dictionary', layout=dictionary_layout, element_justification='c')
     ]
 ]
-
-logging.basicConfig(filename="src/info.log", level=logging.NOTSET,
-                    format='%(levelname)s - %(asctime)s - %(name)s - %(message)s ')
 
 window = sg.Window(title='Subtitle Man', layout=layout, element_justification='c', margins=(10, 10))
 
 while True:
-    event, values = window.read()
+    event, values = window()
     print(event, values)
     if event == sg.WIN_CLOSED:
         break
     if event == '-IMPORT-':
         try:
-            filename, file = file_reader(values['-IMPORT-'])
-            window['-FILE LOCATION-'].update(filename)
+            filename, file = file_reader(values['-FILE LOCATION-'])
         except Exception as t:
             logging.error(t)
 
@@ -188,17 +195,25 @@ while True:
 
     if event == '-EXCLUDE-':
         try:
-            add_to_exclude(values['-WORD FOR EXCLUDE-'])
+            add_to_exclude(values['-WORD COMMON-'])
             common_words = get_common_word()
         except Exception as ex:
             logging.error(f'{ex} in event -EXCLUDE-')
 
     if event == '-ADD TO SEARCH-':
         try:
-            remove_from_exclude(values['-WORD FOR INCLUDE-'])
+            remove_from_exclude(values['-WORD COMMON-'])
             common_words = get_common_word()
         except Exception as ex:
             logging.error(f'{ex} in event -ADD TO SEARCH-')
+
+    if event == '-DICTIONARY SEARCH-':
+        if values['-DICT SEARCH MODE-'] == 'Inbuilt dictionary (Offline)':
+            sg.Print(get_meaning(values['-DICTIONARY SEARCH WORD-']))
+        elif values['-DICT SEARCH MODE-'] == 'Online Dictionary':
+            sg.Print(get_meaning_pydict(values['-DICTIONARY SEARCH WORD-']))
+        else:
+            sg.popup_error('Select a mode')
 
 
 window.close()

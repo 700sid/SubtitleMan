@@ -111,4 +111,4 @@ if __name__ == '__main__':
     # reset_common_word()
     # Zythum A kind of ancient malt beverage; a liquor made from malt\n and wheat.
     # update_dictionary('chocolates', 'of chocolate')
-    print(get_meaning('eat'))
+    print(get_meaning('sword'))  # When table name returning everything
