@@ -7,21 +7,21 @@
 ### Installation
 
 - Clone the repository
-```commandline
+```
 $ git clone https://github.com/700sid/SubtitleMan.git
 ```
 
 - Change directory to SubtitleMan
-```commandline
+```
 $ cd SubtitleMan
 ```
 
 - Install Requirement
-```commandline
+```
 $ pip install -r requirements.txt
 ```
 
-- Finally Run the Program
-```commandline
+- Finally, Run the Program
+```
 $ python main.py
 ```
