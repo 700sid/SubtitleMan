@@ -8,7 +8,7 @@
 
 - Clone the repository
 ```
-$ git clone https://github.com/700sid/SubtitleMan.git
+$ git clone https://github.com/SidHeart-py/SubtitleMan.git
 ```
 
 - Change directory to SubtitleMan
