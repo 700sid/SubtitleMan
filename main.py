@@ -45,9 +45,15 @@ def file_maker():
             else:
                 new_line = update_line(line)
                 new_srt.append(new_line)
-            sg.OneLineProgressMeter('Making', i + 1, size, no_titlebar=True, grab_anywhere=True)
+            if not sg.OneLineProgressMeter('Making', i, size, no_titlebar=True, grab_anywhere=True):
+                sg.Popup('Operation Canceled by User')
+                break
             i += 1
-        return new_srt
+        else:
+            sg.OneLineProgressMeter('Making', i, size, no_titlebar=True, grab_anywhere=True)
+            sg.Popup('File write completed \nSaved on same Location')
+            return new_srt
+        return False
     except Exception as er:
         logging.error(f'{er} in file_maker')
 
@@ -78,7 +84,7 @@ logging.basicConfig(filename="src/info.log", level=logging.NOTSET,
 # layouts
 head_layout = [
     [
-        sg.Text('Welcome to Subtitle Man')
+        sg.Text('Welcome to Subtitle Man', font=('Franklin Gothic Book', 16))
     ],
     [
         sg.Text('Click here to import file')
@@ -105,14 +111,16 @@ make_file_layout = [
 ]
 include_exclude_word_layout = [
     [
-        sg.Text('Write this word to file')
+        sg.Text('Write this word to file or not')
     ],
     [
         sg.Input(default_text='Enter a word', key='-WORD COMMON-'),
     ],
     [
-        sg.Button('Include', key='-ADD TO SEARCH-', button_color='green4'),
-        sg.Button('Exclude', key='-EXCLUDE-', button_color='firebrick4')
+        sg.Button('Include', key='-ADD TO SEARCH-', button_color='green4',
+                  tooltip='Definition of this word will be wrote on the file.'),
+        sg.Button('Exclude', key='-EXCLUDE-', button_color='firebrick4',
+                  tooltip='Definition of this word will not be wrote on the file.')
     ],
 ]
 add_to_dictionary_layout = [
@@ -153,7 +161,7 @@ layout = [
         sg.Frame('Makefile', layout=make_file_layout, element_justification='c')
     ],
     [
-        sg.Frame('Exclude Word', layout=include_exclude_word_layout, element_justification='c')
+        sg.Frame('Exclude/Include Word', layout=include_exclude_word_layout, element_justification='c')
     ],
     [
         sg.Frame('Add to Dictionary', layout=add_to_dictionary_layout, element_justification='c')
@@ -180,9 +188,10 @@ while True:
         try:
             if file and values['-DICT MODE-']:
                 new_file = file_maker()
-                with open(f'{filename}_subtitle-man.srt', mode='w', encoding='utf-8-sig') as f:
-                    for row in new_file:
-                        f.write(row + '\n')
+                if new_file:
+                    with open(f'{filename}_subtitle-man.srt', mode='w', encoding='utf-8-sig') as f:
+                        for row in new_file:
+                            f.write(row + '\n')
             elif not file:
                 sg.PopupError('Please select\n\n> a valid file\nEnsure Pressing OK button in import')
             elif not values['-DICT MODE-']:

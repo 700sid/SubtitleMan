@@ -41,7 +41,7 @@ def get_meaning(word, next_iter=True, second_chance=True):
         else:
             i = i.split(';')
             meanings.add(i[0])
-    ans = '; '.join(list(meanings)[:3]) or 'Nan'
+    ans = '; '.join(list(meanings)[:1]) or 'Nan'
     if ans == 'Nan' and second_chance:
         ans = second_try_get_meaning(word)
     return ans or 'Nan'
@@ -67,7 +67,7 @@ def second_try_get_meaning(word):
 
 # get definition from PyDictionary slow but effective
 def get_meaning_pydict(word):
-    return list(dictionary.meaning(word).values())[0][:1]
+    return list(dictionary.meaning(word).values())[0][0] or 'Nan'
 
 
 # insert word
