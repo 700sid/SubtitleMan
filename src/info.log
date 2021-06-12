@@ -3815,3 +3815,9 @@ ERROR - 2021-06-09 23:22:45,795 - root - '-IMPORT-'
 ERROR - 2021-06-09 23:45:12,118 - root - '-IMPORT-' 
 ERROR - 2021-06-09 23:45:26,178 - root - '-IMPORT-' 
 ERROR - 2021-06-09 23:46:43,132 - root - '-IMPORT-' 
+DEBUG - 2021-06-10 11:08:11,584 - urllib3.connectionpool - Starting new HTTP connection (1): wordnetweb.princeton.edu:80 
+DEBUG - 2021-06-10 11:08:12,881 - urllib3.connectionpool - http://wordnetweb.princeton.edu:80 "GET /perl/webwn?s=rush HTTP/1.1" 200 None 
+ERROR - 2021-06-10 20:31:38,256 - root - 'NoneType' object has no attribute 'values' in -DICTIONARY SEARCH- 
+ERROR - 2021-06-10 20:32:11,782 - root - 'NoneType' object has no attribute 'values' in -DICTIONARY SEARCH- 
+ERROR - 2021-06-10 20:33:19,074 - root - 'NoneType' object has no attribute 'values' in -DICTIONARY SEARCH- 
+ERROR - 2021-06-10 20:33:39,538 - root - 'NoneType' object has no attribute 'values' in -DICTIONARY SEARCH- 

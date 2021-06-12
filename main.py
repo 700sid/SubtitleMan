@@ -177,14 +177,19 @@ while True:
             logging.error(t)
 
     if event == '-MAKE FILE-':
-        if file and values['-DICT MODE-']:
-            new_file = file_maker()
-            with open(f'{filename}_subtitle-man.srt', mode='w', encoding='utf-8-sig') as f:
-                for row in new_file:
-                    f.write(row + '\n')
-
-        else:
-            sg.PopupError('Please select a valid file or dict mode')
+        try:
+            if file and values['-DICT MODE-']:
+                new_file = file_maker()
+                with open(f'{filename}_subtitle-man.srt', mode='w', encoding='utf-8-sig') as f:
+                    for row in new_file:
+                        f.write(row + '\n')
+            elif not file:
+                sg.PopupError('Please select\n\n> a valid file\nEnsure Pressing OK button in import')
+            elif not values['-DICT MODE-']:
+                sg.PopupError('Please select\n\n> a dict mode')
+        except Exception as ex:
+            sg.PopupError(ex)
+            logging.error(f'{ex} in -makefile-')
 
     if event == '-ADD TO DICT-':
         try:
@@ -208,12 +213,15 @@ while True:
             logging.error(f'{ex} in event -ADD TO SEARCH-')
 
     if event == '-DICTIONARY SEARCH-':
-        if values['-DICT SEARCH MODE-'] == 'Inbuilt dictionary (Offline)':
-            sg.Print(get_meaning(values['-DICTIONARY SEARCH WORD-']))
-        elif values['-DICT SEARCH MODE-'] == 'Online Dictionary':
-            sg.Print(get_meaning_pydict(values['-DICTIONARY SEARCH WORD-']))
-        else:
-            sg.popup_error('Select a mode')
-
+        try:
+            if values['-DICT SEARCH MODE-'] == 'Inbuilt dictionary (Offline)':
+                sg.Print(get_meaning(values['-DICTIONARY SEARCH WORD-']), no_titlebar=True)
+            elif values['-DICT SEARCH MODE-'] == 'Online Dictionary':
+                sg.Print(get_meaning_pydict(values['-DICTIONARY SEARCH WORD-']), no_titlebar=True)
+            else:
+                sg.popup_error('Select a mode')
+        except Exception as es:
+            logging.error(f'{es} in -DICTIONARY SEARCH-')
+            sg.popup_error(f'{es}\n\n"Try righting single word"')
 
 window.close()
