@@ -9,16 +9,21 @@ from src.ExcludedWord import *
 
 def update_line(line):
     new_line = []
-    words = re.findall('([A-Za-z]*|[^A-Za-z])', line)
+    words = re.findall('([A-Za-z]*|[^A-Za-z])', line)  # Splitting words and non words
     for word in words:
-        if word.isalpha():
+        if word.isalpha():  # checking for word
             if lang.check(word) and word.lower() not in common_words:
+                # Checking if english word not a common word
+                # TODO: store word and meaning in dict to prevent from search again and create summary file
                 try:
                     if values['-DICT MODE-'] == 'Online Dictionary (slow but effective)':
+                        # get word from online dictionary
                         meaning = get_meaning_pydict(word)
                     elif values['-DICT MODE-'] == 'Inbuilt dictionary (Fast but less effective)':
+                        # get word from the local database comparatively faster
                         meaning = get_meaning(word)
                     if meaning:
+                        # TODO: select legitimate meaning and add to dict
                         new_word = f'{word}(: {meaning})'
                     else:
                         new_word = word
@@ -38,18 +43,22 @@ def file_maker():
         new_srt = []
         i = 0
         size = len(file)
-        no_word = r'^[^A-Za-z]*$'
+        no_word = r'^[^A-Za-z]*$'  # checking if line contains words or not
         for line in file:
             if re.match(no_word, line):
+                # if no words in line we append as it is
                 new_srt.append(line)
             else:
+                # if words update line and append new line
                 new_line = update_line(line)
                 new_srt.append(new_line)
             if not sg.OneLineProgressMeter('Making', i, size, no_titlebar=True, grab_anywhere=True):
+                # A progress meter for show progress and also have power to cancel progress
                 sg.Popup('Operation Canceled by User')
                 break
             i += 1
-        else:
+        else:  # if for run flawlessly then else occur
+            # additional meter statement for overcoming a error of returning false in last iteration
             sg.OneLineProgressMeter('Making', i, size, no_titlebar=True, grab_anywhere=True)
             sg.Popup('File write completed \nSaved on same Location')
             return new_srt
@@ -59,13 +68,16 @@ def file_maker():
 
 
 def file_reader(filename_local):
+    # create a temp file for safety, not working in original file
     try:
         if os.path.isfile('src/temp.srt'):
             os.remove('src/temp.srt')
         if filename_local.lower().endswith(('.mkv', '.mp4', '.avi', '.vob', '.mov')):
+            # using ffmpeg for extract srt file from video file
             os.system(f'ffmpeg -i "{filename_local}" "src/temp.srt"')
         elif filename_local.lower().endswith(('.srt', '.sub', '.vtt', 'txt', 'sbv', 'ttml')):
             shutil.copy(filename_local, 'src/temp.srt')
+        # returning file location with list of lines in file
         return filename_local, [line.strip() for line in open(f'src/temp.srt', 'r', encoding='utf')]
     except Exception as er:
         logging.error(f'{er} in fun file_reader()')
@@ -76,7 +88,7 @@ def file_reader(filename_local):
 # Default Variable
 file = None
 lang = enchant.Dict("en_US")
-common_words = get_common_word()
+common_words = get_common_word()  # List of common words
 sg.theme('DarkGrey14')
 logging.basicConfig(filename="src/info.log", level=logging.NOTSET,
                     format='%(levelname)s - %(asctime)s - %(name)s - %(message)s ')
@@ -117,7 +129,7 @@ include_exclude_word_layout = [
         sg.Input(default_text='Enter a word', key='-WORD COMMON-'),
     ],
     [
-        sg.Button('Include', key='-ADD TO SEARCH-', button_color='green4',
+        sg.Button('Include', key='-INCLUDE-', button_color='green4',
                   tooltip='Definition of this word will be wrote on the file.'),
         sg.Button('Exclude', key='-EXCLUDE-', button_color='firebrick4',
                   tooltip='Definition of this word will not be wrote on the file.')
@@ -171,20 +183,23 @@ layout = [
     ]
 ]
 
-window = sg.Window(title='Subtitle Man', layout=layout, element_justification='c', margins=(10, 10))
+window = sg.Window(title='Subtitle Man', layout=layout, element_justification='c',
+                   margins=(10, 10), enable_close_attempted_event=True)
 
 while True:
     event, values = window()
     print(event, values)
-    if event == sg.WIN_CLOSED:
+    if event == sg.WINDOW_CLOSE_ATTEMPTED_EVENT and sg.popup_yes_no('Do you really want to exit?') == 'Yes':
         break
     if event == '-IMPORT-':
+        # Just import file and take his name and list of line as result
         try:
             filename, file = file_reader(values['-FILE LOCATION-'])
         except Exception as t:
             logging.error(t)
 
     if event == '-MAKE FILE-':
+        # make your file in same location if -IMPORT- Successful && A dictionary mode selected
         try:
             if file and values['-DICT MODE-']:
                 new_file = file_maker()
@@ -201,6 +216,7 @@ while True:
             logging.error(f'{ex} in -makefile-')
 
     if event == '-ADD TO DICT-':
+        # Add a definition to dictionary
         try:
             update_dictionary(values['-WORD FOR DICT-'], values['-MEANING FOR DICT-'])
         except Exception as ex:
@@ -208,20 +224,23 @@ while True:
             logging.error(f'{ex} happen in event \'-ADD TO DICT-\'')
 
     if event == '-EXCLUDE-':
+        # That word will not be written in your file next time
         try:
             add_to_exclude(values['-WORD COMMON-'])
             common_words = get_common_word()
         except Exception as ex:
             logging.error(f'{ex} in event -EXCLUDE-')
 
-    if event == '-ADD TO SEARCH-':
+    if event == '-INCLUDE-':
+        # That word will be written in your file next time
         try:
             remove_from_exclude(values['-WORD COMMON-'])
             common_words = get_common_word()
         except Exception as ex:
-            logging.error(f'{ex} in event -ADD TO SEARCH-')
+            logging.error(f'{ex} in event -INCLUDE-')
 
     if event == '-DICTIONARY SEARCH-':
+        # A normal dictionary for simple usage
         try:
             if values['-DICT SEARCH MODE-'] == 'Inbuilt dictionary (Offline)':
                 sg.Print(get_meaning(values['-DICTIONARY SEARCH WORD-']), no_titlebar=True)
