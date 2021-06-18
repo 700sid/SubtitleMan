@@ -1,9 +1,12 @@
+import PySimpleGUI as sg
 import logging
 import sqlite3
 import os
 import pathlib
 import shutil
 import PyDictionary
+import requests
+import json
 
 
 # default var
@@ -47,7 +50,7 @@ def get_meaning(word, next_iter=True, second_chance=True):
         else:
             i = i.split(';')
             meanings.add(i[0])
-    ans = '; '.join(list(meanings)[:1]) or 'Nan'
+    ans = '; '.join(list(meanings)) or 'Nan'
     if ans == 'Nan' and second_chance:
         # If don't find answer we gave it a second chance by overcoming some flaws of Offline Dictionary
         ans = second_try_get_meaning(word)
@@ -81,6 +84,44 @@ def get_meaning_pydict(word):
     return list(dictionary.meaning(word).values())[0][0] or 'Nan'
 
 
+def get_meaning_dictionary_api(word, session=False):
+    url = f"https://api.dictionaryapi.dev/api/v2/entries/en_US/{word}"
+
+    payload = {}
+    headers = {}
+    if session:  # using session for speed( https://stackoverflow.com/questions/34512646/how-to-speed-up-api-requests )
+        response = session.request("GET", url, headers=headers, data=payload)
+    else:
+        response = requests.request("GET", url, headers=headers, data=payload)
+    response = json.loads(response.text)
+    return response
+
+
+# decorate json output to be displayed or written in a file
+def decorated_api_result(word, response=False):
+    if not response:
+        response = get_meaning_dictionary_api(word)
+    else:
+        response = word
+
+    output_list = list()
+
+    for i in response:
+        output_list.append(f'Word : {i["word"]}')
+        for meanings in i['meanings']:
+            output_list.append(' ' * 4 + f'Part of Speech : {meanings["partOfSpeech"]}')
+            output_list.append(' ' * 4 + "Definitions")
+            for definitions in meanings['definitions']:
+                output_list.append(' ' * 8 + f'definition :')
+                output_list.append(' ' * 12 + definitions["definition"])
+                if 'synonyms' in definitions.keys():
+                    output_list.append(' ' * 8 + 'Synonym : ')
+                    for synonym in definitions['synonyms']:
+                        output_list.append(' ' * 12 + synonym)
+                output_list.append(' ' * 8 + f'Examples : {definitions["example"]}')
+    return output_list
+
+
 # insert word
 def update_dictionary(word, meaning):
     # Add a word meaning(ie definition) in Dictionary
@@ -90,9 +131,11 @@ def update_dictionary(word, meaning):
         if not val:
             conn_dict.execute(f'insert into words_ values(?, ?)', (word.title(), meaning))
             conn_dict.commit()
+            sg.popup_no_border(f'Successfully Write\nword:{word}\nDefinition{meaning}')
         else:
-            print("Already there")
+            sg.popup_no_border(f"Word {word} Already there")
     except Exception as ex:
+        sg.popup_error(f'{ex} in update_dictionary', no_titlebar=True)
         logging.error(f'{ex} in update_dictionary')
 
 
@@ -104,10 +147,13 @@ def add_to_exclude(word):
         if not a:
             conn_common_word.execute(f'insert into words values ("{word.lower()}")')
             conn_common_word.commit()
+            sg.popup_no_border(f'{word} exclude successful')
         else:
             print(f'{word} already in there')
+            sg.popup_no_border(f'{word} already there')
             logging.info(f'{word} already in there :- in fun add_to_search')
     except Exception as ex:
+        sg.popup_error(f'{ex} in Exclude')
         logging.error(f'{ex} in add_to_search')
 
 
@@ -117,7 +163,9 @@ def remove_from_exclude(word):
     try:
         conn_common_word.execute(f'delete from words where word="{word.lower()}"')
         conn_common_word.commit()
+        sg.popup_no_border(f'{word} include successful')
     except Exception as ex:
+        sg.popup_error(f'{ex} in Include')
         logging.error(f'{ex} in remove from dict')
 
 
@@ -126,4 +174,6 @@ if __name__ == '__main__':
     # reset_common_word()
     # Zythum:- A kind of ancient malt beverage; a liquor made from malt\n and wheat.
     # update_dictionary('chocolates', 'of chocolate')
-    # print(get_meaning('sword'))  # When table name returning everything
+    print(*decorated_api_result('miserable'), sep='\n')  # When table name returning everything
+    # a = get_meaning_dictionary_api('money')
+    # print(a[0]['meanings'][0]['definitions'][0]['definition'])

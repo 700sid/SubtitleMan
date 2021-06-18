@@ -7,21 +7,33 @@ import shutil
 from src.ExcludedWord import *
 
 
-def update_line(line):
+# TODO: stable http connection to not connect every time and use multi threading or subprocesses
+# TODO: in sort speed up
+
+def update_line(line, session):
     new_line = []
     words = re.findall('([A-Za-z]*|[^A-Za-z])', line)  # Splitting words and non words
     for word in words:
         if word.isalpha():  # checking for word
             if lang.check(word) and word.lower() not in common_words:
                 # Checking if english word not a common word
-                # TODO: store word and meaning in dict to prevent from search again and create summary file
+                # TODO: create summary file
                 try:
-                    if values['-DICT MODE-'] == 'Online Dictionary (slow but effective)':
+                    if word in word_written.keys():
+                        if values['-DICT MODE-'] == 'Online Dictionary (slow but effective)':
+                            meaning = word_written[word][0]['meanings'][0]['definitions'][0]['definition']
+                        elif values['-DICT MODE-'] == 'Inbuilt dictionary (Fast but less effective)':
+                            meaning = min(word_written[word].split(';'))
+                    elif values['-DICT MODE-'] == 'Online Dictionary (slow but effective)':
                         # get word from online dictionary
-                        meaning = get_meaning_pydict(word)
+                        meaning = get_meaning_dictionary_api(word, session)
+                        word_written[word] = meaning
+                        meaning = meaning[0]['meanings'][0]['definitions'][0]['definition']
                     elif values['-DICT MODE-'] == 'Inbuilt dictionary (Fast but less effective)':
                         # get word from the local database comparatively faster
                         meaning = get_meaning(word)
+                        word_written[word] = meaning
+                        meaning = min(meaning.split(';'))
                     if meaning:
                         # TODO: select legitimate meaning and add to dict
                         new_word = f'{word}(: {meaning})'
@@ -44,24 +56,25 @@ def file_maker():
         i = 0
         size = len(file)
         no_word = r'^[^A-Za-z]*$'  # checking if line contains words or not
-        for line in file:
-            if re.match(no_word, line):
-                # if no words in line we append as it is
-                new_srt.append(line)
-            else:
-                # if words update line and append new line
-                new_line = update_line(line)
-                new_srt.append(new_line)
-            if not sg.OneLineProgressMeter('Making', i, size, no_titlebar=True, grab_anywhere=True):
-                # A progress meter for show progress and also have power to cancel progress
-                sg.Popup('Operation Canceled by User')
-                break
-            i += 1
-        else:  # if for run flawlessly then else occur
-            # additional meter statement for overcoming a error of returning false in last iteration
-            sg.OneLineProgressMeter('Making', i, size, no_titlebar=True, grab_anywhere=True)
-            sg.Popup('File write completed \nSaved on same Location')
-            return new_srt
+        with requests.Session() as session:  # making a session for gaining online speed
+            for line in file:
+                if re.match(no_word, line):
+                    # if no words in line we append as it is
+                    new_srt.append(line)
+                else:
+                    # if words update line and append new line
+                    new_line = update_line(line, session)
+                    new_srt.append(new_line)
+                if not sg.OneLineProgressMeter('Making', i, size, no_titlebar=True, grab_anywhere=True):
+                    # A progress meter for show progress and also have power to cancel progress
+                    sg.Popup('Operation Canceled by User')
+                    break
+                i += 1
+            else:  # if for run flawlessly then else occur
+                # additional meter statement for overcoming a error of returning false in last iteration
+                sg.OneLineProgressMeter('Making', i, size, no_titlebar=True, grab_anywhere=True)
+                sg.Popup('File write completed \nSaved on same Location')
+                return new_srt
         return False
     except Exception as er:
         logging.error(f'{er} in file_maker')
@@ -92,6 +105,7 @@ common_words = get_common_word()  # List of common words
 sg.theme('DarkGrey14')
 logging.basicConfig(filename="src/info.log", level=logging.NOTSET,
                     format='%(levelname)s - %(asctime)s - %(name)s - %(message)s ')
+word_written = dict()
 
 # layouts
 head_layout = [
@@ -245,7 +259,8 @@ while True:
             if values['-DICT SEARCH MODE-'] == 'Inbuilt dictionary (Offline)':
                 sg.Print(get_meaning(values['-DICTIONARY SEARCH WORD-']), no_titlebar=True)
             elif values['-DICT SEARCH MODE-'] == 'Online Dictionary':
-                sg.Print(get_meaning_pydict(values['-DICTIONARY SEARCH WORD-']), no_titlebar=True)
+                for i in decorated_api_result(values['-DICTIONARY SEARCH WORD-']):
+                    sg.Print(i, no_titlebar=True, grab_anywhere=True)
             else:
                 sg.popup_error('Select a mode')
         except Exception as es:
