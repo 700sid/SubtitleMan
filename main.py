@@ -106,6 +106,7 @@ sg.theme('DarkGrey14')
 logging.basicConfig(filename="src/info.log", level=logging.NOTSET,
                     format='%(levelname)s - %(asctime)s - %(name)s - %(message)s ')
 word_written = dict()
+word_not_written = list()
 
 # layouts
 head_layout = [
