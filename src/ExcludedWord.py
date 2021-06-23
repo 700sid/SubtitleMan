@@ -118,7 +118,8 @@ def decorated_api_result(word, response=False):
                     output_list.append(' ' * 8 + 'Synonym : ')
                     for synonym in definitions['synonyms']:
                         output_list.append(' ' * 12 + synonym)
-                output_list.append(' ' * 8 + f'Examples : {definitions["example"]}')
+                if 'example' in definitions.keys():
+                    output_list.append(' ' * 8 + f'Examples : {definitions["example"]}')
     return output_list
 
 
@@ -174,6 +175,6 @@ if __name__ == '__main__':
     # reset_common_word()
     # Zythum:- A kind of ancient malt beverage; a liquor made from malt\n and wheat.
     # update_dictionary('chocolates', 'of chocolate')
-    print(*decorated_api_result('miserable'), sep='\n')  # When table name returning everything
+    print(*decorated_api_result('Sniffles'), sep='\n')  # When table name returning everything
     # a = get_meaning_dictionary_api('money')
     # print(a[0]['meanings'][0]['definitions'][0]['definition'])
