@@ -33,6 +33,7 @@ $ python main.py
       Dictionary
     - **Offline Dictionary :** This is inbuilt database of dictionary, But meanings are not so good, marked as not 
       recommended
+        - You can also add words to the offline dictionary.
 
 - ### Additional Summary file
     - Another file generates with the summary of the words that are written in the file or hard words.
