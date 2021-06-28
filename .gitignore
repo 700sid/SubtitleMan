@@ -3,5 +3,5 @@ src\temp.srt
 src\__pycache__
 *.pyc
 *.log
-*.log
 *.srt
+*.pyc
