@@ -467,3 +467,661 @@ ERROR - 2021-06-23 13:31:21,070 - root - string indices must be integers in Thre
 ERROR - 2021-06-23 13:31:21,070 - root - string indices must be integers in Thread update word dict None 
 ERROR - 2021-06-23 13:31:21,070 - root - string indices must be integers in Thread update word dict None 
 ERROR - 2021-06-23 13:31:21,070 - root - string indices must be integers in Thread update word dict None 
+DEBUG - 2021-06-23 13:53:41,094 - urllib3.connectionpool - Starting new HTTPS connection (1): api.dictionaryapi.dev:443 
+DEBUG - 2021-06-23 13:53:41,095 - urllib3.connectionpool - Starting new HTTPS connection (2): api.dictionaryapi.dev:443 
+DEBUG - 2021-06-23 13:53:41,098 - urllib3.connectionpool - Starting new HTTPS connection (3): api.dictionaryapi.dev:443 
+DEBUG - 2021-06-23 13:53:41,099 - urllib3.connectionpool - Starting new HTTPS connection (4): api.dictionaryapi.dev:443 
+DEBUG - 2021-06-23 13:53:41,105 - urllib3.connectionpool - Starting new HTTPS connection (5): api.dictionaryapi.dev:443 
+DEBUG - 2021-06-23 13:53:41,112 - urllib3.connectionpool - Starting new HTTPS connection (6): api.dictionaryapi.dev:443 
+DEBUG - 2021-06-23 13:53:41,117 - urllib3.connectionpool - Starting new HTTPS connection (7): api.dictionaryapi.dev:443 
+DEBUG - 2021-06-23 13:53:41,120 - urllib3.connectionpool - Starting new HTTPS connection (8): api.dictionaryapi.dev:443 
+DEBUG - 2021-06-23 13:53:41,124 - urllib3.connectionpool - Starting new HTTPS connection (9): api.dictionaryapi.dev:443 
+DEBUG - 2021-06-23 13:53:41,129 - urllib3.connectionpool - Starting new HTTPS connection (10): api.dictionaryapi.dev:443 
+DEBUG - 2021-06-23 13:53:41,146 - urllib3.connectionpool - Starting new HTTPS connection (11): api.dictionaryapi.dev:443 
+DEBUG - 2021-06-23 13:53:41,148 - urllib3.connectionpool - Starting new HTTPS connection (12): api.dictionaryapi.dev:443 
+DEBUG - 2021-06-23 13:53:42,104 - urllib3.connectionpool - https://api.dictionaryapi.dev:443 "GET /api/v2/entries/en_US/Laughter HTTP/1.1" 200 393 
+DEBUG - 2021-06-23 13:53:42,119 - urllib3.connectionpool - https://api.dictionaryapi.dev:443 "GET /api/v2/entries/en_US/apples HTTP/1.1" 200 625 
+DEBUG - 2021-06-23 13:53:42,134 - urllib3.connectionpool - https://api.dictionaryapi.dev:443 "GET /api/v2/entries/en_US/Alright HTTP/1.1" 200 1363 
+DEBUG - 2021-06-23 13:53:42,145 - urllib3.connectionpool - https://api.dictionaryapi.dev:443 "GET /api/v2/entries/en_US/crying HTTP/1.1" 200 589 
+DEBUG - 2021-06-23 13:53:42,158 - urllib3.connectionpool - https://api.dictionaryapi.dev:443 "GET /api/v2/entries/en_US/gosh HTTP/1.1" 200 235 
+DEBUG - 2021-06-23 13:53:42,168 - urllib3.connectionpool - https://api.dictionaryapi.dev:443 "GET /api/v2/entries/en_US/struggling HTTP/1.1" 200 365 
+DEBUG - 2021-06-23 13:53:42,174 - urllib3.connectionpool - https://api.dictionaryapi.dev:443 "GET /api/v2/entries/en_US/erase HTTP/1.1" 200 343 
+DEBUG - 2021-06-23 13:53:42,183 - urllib3.connectionpool - https://api.dictionaryapi.dev:443 "GET /api/v2/entries/en_US/Ooh HTTP/1.1" 200 586 
+DEBUG - 2021-06-23 13:53:42,206 - urllib3.connectionpool - https://api.dictionaryapi.dev:443 "GET /api/v2/entries/en_US/chills HTTP/1.1" 200 1568 
+DEBUG - 2021-06-23 13:53:42,208 - urllib3.connectionpool - https://api.dictionaryapi.dev:443 "GET /api/v2/entries/en_US/Vocalizes HTTP/1.1" 200 583 
+DEBUG - 2021-06-23 13:53:42,215 - urllib3.connectionpool - https://api.dictionaryapi.dev:443 "GET /api/v2/entries/en_US/Sniffles HTTP/1.1" 200 650 
+DEBUG - 2021-06-23 13:53:42,217 - urllib3.connectionpool - https://api.dictionaryapi.dev:443 "GET /api/v2/entries/en_US/erased HTTP/1.1" 200 289 
+DEBUG - 2021-06-23 13:53:42,358 - urllib3.connectionpool - https://api.dictionaryapi.dev:443 "GET /api/v2/entries/en_US/bud HTTP/1.1" 200 1047 
+DEBUG - 2021-06-23 13:53:42,374 - urllib3.connectionpool - https://api.dictionaryapi.dev:443 "GET /api/v2/entries/en_US/crappy HTTP/1.1" 404 205 
+DEBUG - 2021-06-23 13:53:42,378 - urllib3.connectionpool - https://api.dictionaryapi.dev:443 "GET /api/v2/entries/en_US/smashed HTTP/1.1" 200 435 
+DEBUG - 2021-06-23 13:53:42,399 - urllib3.connectionpool - https://api.dictionaryapi.dev:443 "GET /api/v2/entries/en_US/DOA HTTP/1.1" 200 213 
+DEBUG - 2021-06-23 13:53:42,408 - urllib3.connectionpool - https://api.dictionaryapi.dev:443 "GET /api/v2/entries/en_US/applause HTTP/1.1" 200 418 
+DEBUG - 2021-06-23 13:53:42,426 - urllib3.connectionpool - https://api.dictionaryapi.dev:443 "GET /api/v2/entries/en_US/gentlemen HTTP/1.1" 200 427 
+DEBUG - 2021-06-23 13:53:42,439 - urllib3.connectionpool - https://api.dictionaryapi.dev:443 "GET /api/v2/entries/en_US/squeeze HTTP/1.1" 200 1826 
+DEBUG - 2021-06-23 13:53:42,448 - urllib3.connectionpool - https://api.dictionaryapi.dev:443 "GET /api/v2/entries/en_US/iconic HTTP/1.1" 200 302 
+DEBUG - 2021-06-23 13:53:42,476 - urllib3.connectionpool - https://api.dictionaryapi.dev:443 "GET /api/v2/entries/en_US/superpowers HTTP/1.1" 200 602 
+DEBUG - 2021-06-23 13:53:42,478 - urllib3.connectionpool - https://api.dictionaryapi.dev:443 "GET /api/v2/entries/en_US/noisy HTTP/1.1" 200 702 
+DEBUG - 2021-06-23 13:53:42,480 - urllib3.connectionpool - https://api.dictionaryapi.dev:443 "GET /api/v2/entries/en_US/slipped HTTP/1.1" 200 379 
+DEBUG - 2021-06-23 13:53:42,489 - urllib3.connectionpool - https://api.dictionaryapi.dev:443 "GET /api/v2/entries/en_US/joking HTTP/1.1" 200 223 
+DEBUG - 2021-06-23 13:53:42,599 - urllib3.connectionpool - https://api.dictionaryapi.dev:443 "GET /api/v2/entries/en_US/Regressed HTTP/1.1" 200 1353 
+DEBUG - 2021-06-23 13:53:42,611 - urllib3.connectionpool - https://api.dictionaryapi.dev:443 "GET /api/v2/entries/en_US/regressed HTTP/1.1" 200 1353 
+DEBUG - 2021-06-23 13:53:42,614 - urllib3.connectionpool - https://api.dictionaryapi.dev:443 "GET /api/v2/entries/en_US/forged HTTP/1.1" 200 300 
+DEBUG - 2021-06-23 13:53:42,648 - urllib3.connectionpool - https://api.dictionaryapi.dev:443 "GET /api/v2/entries/en_US/averaging HTTP/1.1" 200 1255 
+DEBUG - 2021-06-23 13:53:42,655 - urllib3.connectionpool - https://api.dictionaryapi.dev:443 "GET /api/v2/entries/en_US/aired HTTP/1.1" 200 1534 
+DEBUG - 2021-06-23 13:53:42,672 - urllib3.connectionpool - https://api.dictionaryapi.dev:443 "GET /api/v2/entries/en_US/finale HTTP/1.1" 200 492 
+DEBUG - 2021-06-23 13:53:42,693 - urllib3.connectionpool - https://api.dictionaryapi.dev:443 "GET /api/v2/entries/en_US/Marta HTTP/1.1" 404 205 
+DEBUG - 2021-06-23 13:53:42,699 - urllib3.connectionpool - https://api.dictionaryapi.dev:443 "GET /api/v2/entries/en_US/creators HTTP/1.1" 200 406 
+DEBUG - 2021-06-23 13:53:42,736 - urllib3.connectionpool - https://api.dictionaryapi.dev:443 "GET /api/v2/entries/en_US/Crane HTTP/1.1" 200 1234 
+DEBUG - 2021-06-23 13:53:42,745 - urllib3.connectionpool - https://api.dictionaryapi.dev:443 "GET /api/v2/entries/en_US/Chandler HTTP/1.1" 404 205 
+DEBUG - 2021-06-23 13:53:42,762 - urllib3.connectionpool - https://api.dictionaryapi.dev:443 "GET /api/v2/entries/en_US/intrigued HTTP/1.1" 200 1486 
+DEBUG - 2021-06-23 13:53:42,781 - urllib3.connectionpool - https://api.dictionaryapi.dev:443 "GET /api/v2/entries/en_US/flashed HTTP/1.1" 200 3084 
+DEBUG - 2021-06-23 13:53:42,893 - urllib3.connectionpool - https://api.dictionaryapi.dev:443 "GET /api/v2/entries/en_US/brilliance HTTP/1.1" 200 359 
+DEBUG - 2021-06-23 13:53:42,895 - urllib3.connectionpool - https://api.dictionaryapi.dev:443 "GET /api/v2/entries/en_US/choreography HTTP/1.1" 404 205 
+DEBUG - 2021-06-23 13:53:42,897 - urllib3.connectionpool - https://api.dictionaryapi.dev:443 "GET /api/v2/entries/en_US/sodas HTTP/1.1" 200 630 
+DEBUG - 2021-06-23 13:53:42,914 - urllib3.connectionpool - https://api.dictionaryapi.dev:443 "GET /api/v2/entries/en_US/inseparable HTTP/1.1" 200 542 
+DEBUG - 2021-06-23 13:53:42,920 - urllib3.connectionpool - https://api.dictionaryapi.dev:443 "GET /api/v2/entries/en_US/Nerf HTTP/1.1" 200 422 
+DEBUG - 2021-06-23 13:53:42,939 - urllib3.connectionpool - https://api.dictionaryapi.dev:443 "GET /api/v2/entries/en_US/traded HTTP/1.1" 200 1204 
+DEBUG - 2021-06-23 13:53:42,955 - urllib3.connectionpool - https://api.dictionaryapi.dev:443 "GET /api/v2/entries/en_US/devastating HTTP/1.1" 200 394 
+DEBUG - 2021-06-23 13:53:42,966 - urllib3.connectionpool - https://api.dictionaryapi.dev:443 "GET /api/v2/entries/en_US/embryos HTTP/1.1" 200 841 
+DEBUG - 2021-06-23 13:53:42,999 - urllib3.connectionpool - https://api.dictionaryapi.dev:443 "GET /api/v2/entries/en_US/peeve HTTP/1.1" 200 1020 
+DEBUG - 2021-06-23 13:53:43,008 - urllib3.connectionpool - https://api.dictionaryapi.dev:443 "GET /api/v2/entries/en_US/rooster HTTP/1.1" 200 363 
+DEBUG - 2021-06-23 13:53:43,022 - urllib3.connectionpool - https://api.dictionaryapi.dev:443 "GET /api/v2/entries/en_US/trivia HTTP/1.1" 200 463 
+DEBUG - 2021-06-23 13:53:43,055 - urllib3.connectionpool - https://api.dictionaryapi.dev:443 "GET /api/v2/entries/en_US/Peeves HTTP/1.1" 200 1022 
+DEBUG - 2021-06-23 13:53:43,137 - urllib3.connectionpool - https://api.dictionaryapi.dev:443 "GET /api/v2/entries/en_US/demanded HTTP/1.1" 200 554 
+DEBUG - 2021-06-23 13:53:43,147 - urllib3.connectionpool - https://api.dictionaryapi.dev:443 "GET /api/v2/entries/en_US/tails HTTP/1.1" 200 2570 
+DEBUG - 2021-06-23 13:53:43,153 - urllib3.connectionpool - https://api.dictionaryapi.dev:443 "GET /api/v2/entries/en_US/toss HTTP/1.1" 200 873 
+DEBUG - 2021-06-23 13:53:43,173 - urllib3.connectionpool - https://api.dictionaryapi.dev:443 "GET /api/v2/entries/en_US/Bleep HTTP/1.1" 200 752 
+DEBUG - 2021-06-23 13:53:43,179 - urllib3.connectionpool - https://api.dictionaryapi.dev:443 "GET /api/v2/entries/en_US/downstairs HTTP/1.1" 404 205 
+DEBUG - 2021-06-23 13:53:43,189 - urllib3.connectionpool - https://api.dictionaryapi.dev:443 "GET /api/v2/entries/en_US/Heckles HTTP/1.1" 200 790 
+DEBUG - 2021-06-23 13:53:43,218 - urllib3.connectionpool - https://api.dictionaryapi.dev:443 "GET /api/v2/entries/en_US/owe HTTP/1.1" 200 560 
+DEBUG - 2021-06-23 13:53:43,226 - urllib3.connectionpool - https://api.dictionaryapi.dev:443 "GET /api/v2/entries/en_US/waffle HTTP/1.1" 200 1703 
+DEBUG - 2021-06-23 13:53:43,256 - urllib3.connectionpool - https://api.dictionaryapi.dev:443 "GET /api/v2/entries/en_US/erogenous HTTP/1.1" 200 371 
+DEBUG - 2021-06-23 13:53:43,278 - urllib3.connectionpool - https://api.dictionaryapi.dev:443 "GET /api/v2/entries/en_US/Gentlemen HTTP/1.1" 200 427 
+DEBUG - 2021-06-23 13:53:43,279 - urllib3.connectionpool - https://api.dictionaryapi.dev:443 "GET /api/v2/entries/en_US/Applause HTTP/1.1" 200 418 
+DEBUG - 2021-06-23 13:53:43,305 - urllib3.connectionpool - https://api.dictionaryapi.dev:443 "GET /api/v2/entries/en_US/barbershop HTTP/1.1" 200 399 
+DEBUG - 2021-06-23 13:53:43,373 - urllib3.connectionpool - https://api.dictionaryapi.dev:443 "GET /api/v2/entries/en_US/quartet HTTP/1.1" 200 455 
+DEBUG - 2021-06-23 13:53:43,382 - urllib3.connectionpool - https://api.dictionaryapi.dev:443 "GET /api/v2/entries/en_US/famously HTTP/1.1" 200 471 
+DEBUG - 2021-06-23 13:53:43,403 - urllib3.connectionpool - https://api.dictionaryapi.dev:443 "GET /api/v2/entries/en_US/boyfriend HTTP/1.1" 200 782 
+DEBUG - 2021-06-23 13:53:43,418 - urllib3.connectionpool - https://api.dictionaryapi.dev:443 "GET /api/v2/entries/en_US/Dah HTTP/1.1" 200 124 
+DEBUG - 2021-06-23 13:53:43,428 - urllib3.connectionpool - https://api.dictionaryapi.dev:443 "GET /api/v2/entries/en_US/dah HTTP/1.1" 200 124 
+DEBUG - 2021-06-23 13:53:43,443 - urllib3.connectionpool - https://api.dictionaryapi.dev:443 "GET /api/v2/entries/en_US/loyal HTTP/1.1" 200 417 
+DEBUG - 2021-06-23 13:53:43,454 - urllib3.connectionpool - https://api.dictionaryapi.dev:443 "GET /api/v2/entries/en_US/spoiled HTTP/1.1" 200 436 
+DEBUG - 2021-06-23 13:53:43,475 - urllib3.connectionpool - https://api.dictionaryapi.dev:443 "GET /api/v2/entries/en_US/Joey HTTP/1.1" 200 580 
+DEBUG - 2021-06-23 13:53:43,523 - urllib3.connectionpool - https://api.dictionaryapi.dev:443 "GET /api/v2/entries/en_US/Phoebe HTTP/1.1" 200 1022 
+DEBUG - 2021-06-23 13:53:43,538 - urllib3.connectionpool - https://api.dictionaryapi.dev:443 "GET /api/v2/entries/en_US/repartee HTTP/1.1" 200 658 
+DEBUG - 2021-06-23 13:53:43,555 - urllib3.connectionpool - https://api.dictionaryapi.dev:443 "GET /api/v2/entries/en_US/swore HTTP/1.1" 200 952 
+DEBUG - 2021-06-23 13:53:43,571 - urllib3.connectionpool - https://api.dictionaryapi.dev:443 "GET /api/v2/entries/en_US/louder HTTP/1.1" 200 601 
+DEBUG - 2021-06-23 13:53:43,615 - urllib3.connectionpool - https://api.dictionaryapi.dev:443 "GET /api/v2/entries/en_US/stung HTTP/1.1" 200 978 
+DEBUG - 2021-06-23 13:53:43,624 - urllib3.connectionpool - https://api.dictionaryapi.dev:443 "GET /api/v2/entries/en_US/jellyfish HTTP/1.1" 200 484 
+DEBUG - 2021-06-23 13:53:43,638 - urllib3.connectionpool - https://api.dictionaryapi.dev:443 "GET /api/v2/entries/en_US/Stung HTTP/1.1" 200 978 
+DEBUG - 2021-06-23 13:53:43,656 - urllib3.connectionpool - https://api.dictionaryapi.dev:443 "GET /api/v2/entries/en_US/scared HTTP/1.1" 200 360 
+DEBUG - 2021-06-23 13:53:43,682 - urllib3.connectionpool - https://api.dictionaryapi.dev:443 "GET /api/v2/entries/en_US/digging HTTP/1.1" 200 1044 
+DEBUG - 2021-06-23 13:53:43,706 - urllib3.connectionpool - https://api.dictionaryapi.dev:443 "GET /api/v2/entries/en_US/peed HTTP/1.1" 200 254 
+DEBUG - 2021-06-23 13:53:43,726 - urllib3.connectionpool - https://api.dictionaryapi.dev:443 "GET /api/v2/entries/en_US/stepped HTTP/1.1" 200 288 
+DEBUG - 2021-06-23 13:53:43,734 - urllib3.connectionpool - https://api.dictionaryapi.dev:443 "GET /api/v2/entries/en_US/fright HTTP/1.1" 200 668 
+DEBUG - 2021-06-23 13:53:43,774 - urllib3.connectionpool - https://api.dictionaryapi.dev:443 "GET /api/v2/entries/en_US/Muffled HTTP/1.1" 200 324 
+DEBUG - 2021-06-23 13:53:43,792 - urllib3.connectionpool - https://api.dictionaryapi.dev:443 "GET /api/v2/entries/en_US/scream HTTP/1.1" 200 654 
+DEBUG - 2021-06-23 13:53:43,812 - urllib3.connectionpool - https://api.dictionaryapi.dev:443 "GET /api/v2/entries/en_US/screaming HTTP/1.1" 200 424 
+DEBUG - 2021-06-23 13:53:43,855 - urllib3.connectionpool - https://api.dictionaryapi.dev:443 "GET /api/v2/entries/en_US/freak HTTP/1.1" 200 1751 
+DEBUG - 2021-06-23 13:53:43,861 - urllib3.connectionpool - https://api.dictionaryapi.dev:443 "GET /api/v2/entries/en_US/unbelievable HTTP/1.1" 200 442 
+DEBUG - 2021-06-23 13:53:43,873 - urllib3.connectionpool - https://api.dictionaryapi.dev:443 "GET /api/v2/entries/en_US/wore HTTP/1.1" 200 411 
+DEBUG - 2021-06-23 13:53:43,889 - urllib3.connectionpool - https://api.dictionaryapi.dev:443 "GET /api/v2/entries/en_US/lacy HTTP/1.1" 200 383 
+DEBUG - 2021-06-23 13:53:43,906 - urllib3.connectionpool - https://api.dictionaryapi.dev:443 "GET /api/v2/entries/en_US/hippie HTTP/1.1" 200 622 
+DEBUG - 2021-06-23 13:53:43,922 - urllib3.connectionpool - https://api.dictionaryapi.dev:443 "GET /api/v2/entries/en_US/blouse HTTP/1.1" 200 523 
+DEBUG - 2021-06-23 13:53:43,955 - urllib3.connectionpool - https://api.dictionaryapi.dev:443 "GET /api/v2/entries/en_US/hunk HTTP/1.1" 200 556 
+DEBUG - 2021-06-23 13:53:43,988 - urllib3.connectionpool - https://api.dictionaryapi.dev:443 "GET /api/v2/entries/en_US/blew HTTP/1.1" 200 2531 
+DEBUG - 2021-06-23 13:53:43,997 - urllib3.connectionpool - https://api.dictionaryapi.dev:443 "GET /api/v2/entries/en_US/gazillion HTTP/1.1" 200 440 
+DEBUG - 2021-06-23 13:53:44,040 - urllib3.connectionpool - https://api.dictionaryapi.dev:443 "GET /api/v2/entries/en_US/hangdog HTTP/1.1" 200 522 
+DEBUG - 2021-06-23 13:53:44,069 - urllib3.connectionpool - https://api.dictionaryapi.dev:443 "GET /api/v2/entries/en_US/beg HTTP/1.1" 200 580 
+DEBUG - 2021-06-23 13:53:44,078 - urllib3.connectionpool - https://api.dictionaryapi.dev:443 "GET /api/v2/entries/en_US/miserable HTTP/1.1" 200 1093 
+DEBUG - 2021-06-23 13:53:44,090 - urllib3.connectionpool - https://api.dictionaryapi.dev:443 "GET /api/v2/entries/en_US/recollection HTTP/1.1" 200 351 
+DEBUG - 2021-06-23 13:53:44,109 - urllib3.connectionpool - https://api.dictionaryapi.dev:443 "GET /api/v2/entries/en_US/Ursula HTTP/1.1" 404 205 
+DEBUG - 2021-06-23 13:53:44,115 - urllib3.connectionpool - https://api.dictionaryapi.dev:443 "GET /api/v2/entries/en_US/beseech HTTP/1.1" 200 459 
+DEBUG - 2021-06-23 13:53:44,177 - urllib3.connectionpool - https://api.dictionaryapi.dev:443 "GET /api/v2/entries/en_US/nailed HTTP/1.1" 200 366 
+DEBUG - 2021-06-23 13:53:44,199 - urllib3.connectionpool - https://api.dictionaryapi.dev:443 "GET /api/v2/entries/en_US/waitress HTTP/1.1" 200 492 
+DEBUG - 2021-06-23 13:53:44,211 - urllib3.connectionpool - https://api.dictionaryapi.dev:443 "GET /api/v2/entries/en_US/audition HTTP/1.1" 404 205 
+DEBUG - 2021-06-23 13:53:44,257 - urllib3.connectionpool - https://api.dictionaryapi.dev:443 "GET /api/v2/entries/en_US/ironically HTTP/1.1" 200 232 
+DEBUG - 2021-06-23 13:53:44,266 - urllib3.connectionpool - https://api.dictionaryapi.dev:443 "GET /api/v2/entries/en_US/elevated HTTP/1.1" 200 511 
+DEBUG - 2021-06-23 13:53:44,272 - urllib3.connectionpool - https://api.dictionaryapi.dev:443 "GET /api/v2/entries/en_US/auditioned HTTP/1.1" 404 205 
+DEBUG - 2021-06-23 13:53:44,305 - urllib3.connectionpool - https://api.dictionaryapi.dev:443 "GET /api/v2/entries/en_US/callback HTTP/1.1" 200 1018 
+DEBUG - 2021-06-23 13:53:44,322 - urllib3.connectionpool - https://api.dictionaryapi.dev:443 "GET /api/v2/entries/en_US/woke HTTP/1.1" 200 239 
+DEBUG - 2021-06-23 13:53:44,330 - urllib3.connectionpool - https://api.dictionaryapi.dev:443 "GET /api/v2/entries/en_US/chunk HTTP/1.1" 200 814 
+DEBUG - 2021-06-23 13:53:44,356 - urllib3.connectionpool - https://api.dictionaryapi.dev:443 "GET /api/v2/entries/en_US/blacked HTTP/1.1" 200 2816 
+DEBUG - 2021-06-23 13:53:44,362 - urllib3.connectionpool - https://api.dictionaryapi.dev:443 "GET /api/v2/entries/en_US/scab HTTP/1.1" 200 906 
+DEBUG - 2021-06-23 13:53:44,376 - urllib3.connectionpool - https://api.dictionaryapi.dev:443 "GET /api/v2/entries/en_US/attracted HTTP/1.1" 200 355 
+DEBUG - 2021-06-23 13:53:44,418 - urllib3.connectionpool - https://api.dictionaryapi.dev:443 "GET /api/v2/entries/en_US/Aah HTTP/1.1" 404 205 
+DEBUG - 2021-06-23 13:53:44,457 - urllib3.connectionpool - https://api.dictionaryapi.dev:443 "GET /api/v2/entries/en_US/fuzz HTTP/1.1" 200 886 
+DEBUG - 2021-06-23 13:53:44,465 - urllib3.connectionpool - https://api.dictionaryapi.dev:443 "GET /api/v2/entries/en_US/alright HTTP/1.1" 200 1363 
+DEBUG - 2021-06-23 13:53:44,523 - urllib3.connectionpool - https://api.dictionaryapi.dev:443 "GET /api/v2/entries/en_US/reacted HTTP/1.1" 200 523 
+DEBUG - 2021-06-23 13:53:44,536 - urllib3.connectionpool - https://api.dictionaryapi.dev:443 "GET /api/v2/entries/en_US/richer HTTP/1.1" 200 1383 
+DEBUG - 2021-06-23 13:53:44,539 - urllib3.connectionpool - https://api.dictionaryapi.dev:443 "GET /api/v2/entries/en_US/Springsteen HTTP/1.1" 404 205 
+DEBUG - 2021-06-23 13:53:44,573 - urllib3.connectionpool - https://api.dictionaryapi.dev:443 "GET /api/v2/entries/en_US/sitcom HTTP/1.1" 200 250 
+DEBUG - 2021-06-23 13:53:44,581 - urllib3.connectionpool - https://api.dictionaryapi.dev:443 "GET /api/v2/entries/en_US/easiest HTTP/1.1" 200 1240 
+DEBUG - 2021-06-23 13:53:44,599 - urllib3.connectionpool - https://api.dictionaryapi.dev:443 "GET /api/v2/entries/en_US/sparkles HTTP/1.1" 200 1315 
+DEBUG - 2021-06-23 13:53:44,618 - urllib3.connectionpool - https://api.dictionaryapi.dev:443 "GET /api/v2/entries/en_US/handlers HTTP/1.1" 200 858 
+DEBUG - 2021-06-23 13:53:44,657 - urllib3.connectionpool - https://api.dictionaryapi.dev:443 "GET /api/v2/entries/en_US/sounded HTTP/1.1" 200 4581 
+DEBUG - 2021-06-23 13:53:44,666 - urllib3.connectionpool - https://api.dictionaryapi.dev:443 "GET /api/v2/entries/en_US/insane HTTP/1.1" 200 497 
+DEBUG - 2021-06-23 13:53:44,693 - urllib3.connectionpool - https://api.dictionaryapi.dev:443 "GET /api/v2/entries/en_US/LAX HTTP/1.1" 200 766 
+DEBUG - 2021-06-23 13:53:44,698 - urllib3.connectionpool - https://api.dictionaryapi.dev:443 "GET /api/v2/entries/en_US/Griffith HTTP/1.1" 404 205 
+DEBUG - 2021-06-23 13:53:44,709 - urllib3.connectionpool - https://api.dictionaryapi.dev:443 "GET /api/v2/entries/en_US/insignificant HTTP/1.1" 200 862 
+DEBUG - 2021-06-23 13:53:44,779 - urllib3.connectionpool - https://api.dictionaryapi.dev:443 "GET /api/v2/entries/en_US/taping HTTP/1.1" 200 1053 
+DEBUG - 2021-06-23 13:53:44,820 - urllib3.connectionpool - https://api.dictionaryapi.dev:443 "GET /api/v2/entries/en_US/hardest HTTP/1.1" 200 3004 
+DEBUG - 2021-06-23 13:53:44,832 - urllib3.connectionpool - https://api.dictionaryapi.dev:443 "GET /api/v2/entries/en_US/spins HTTP/1.1" 200 1442 
+DEBUG - 2021-06-23 13:53:44,843 - urllib3.connectionpool - https://api.dictionaryapi.dev:443 "GET /api/v2/entries/en_US/incredibly HTTP/1.1" 200 648 
+DEBUG - 2021-06-23 13:53:44,858 - urllib3.connectionpool - https://api.dictionaryapi.dev:443 "GET /api/v2/entries/en_US/unlikable HTTP/1.1" 200 360 
+DEBUG - 2021-06-23 13:53:44,867 - urllib3.connectionpool - https://api.dictionaryapi.dev:443 "GET /api/v2/entries/en_US/selfish HTTP/1.1" 200 605 
+DEBUG - 2021-06-23 13:53:44,870 - urllib3.connectionpool - https://api.dictionaryapi.dev:443 "GET /api/v2/entries/en_US/Muddling HTTP/1.1" 200 550 
+DEBUG - 2021-06-23 13:53:44,907 - urllib3.connectionpool - https://api.dictionaryapi.dev:443 "GET /api/v2/entries/en_US/Madeline HTTP/1.1" 404 205 
+DEBUG - 2021-06-23 13:53:44,916 - urllib3.connectionpool - https://api.dictionaryapi.dev:443 "GET /api/v2/entries/en_US/steak HTTP/1.1" 200 355 
+DEBUG - 2021-06-23 13:53:44,940 - urllib3.connectionpool - https://api.dictionaryapi.dev:443 "GET /api/v2/entries/en_US/warmth HTTP/1.1" 200 356 
+DEBUG - 2021-06-23 13:53:44,952 - urllib3.connectionpool - https://api.dictionaryapi.dev:443 "GET /api/v2/entries/en_US/genuineness HTTP/1.1" 200 180 
+DEBUG - 2021-06-23 13:53:44,960 - urllib3.connectionpool - https://api.dictionaryapi.dev:443 "GET /api/v2/entries/en_US/sincerity HTTP/1.1" 200 447 
+DEBUG - 2021-06-23 13:53:45,031 - urllib3.connectionpool - https://api.dictionaryapi.dev:443 "GET /api/v2/entries/en_US/impressions HTTP/1.1" 200 1331 
+DEBUG - 2021-06-23 13:53:45,071 - urllib3.connectionpool - https://api.dictionaryapi.dev:443 "GET /api/v2/entries/en_US/graveyard HTTP/1.1" 200 462 
+DEBUG - 2021-06-23 13:53:45,089 - urllib3.connectionpool - https://api.dictionaryapi.dev:443 "GET /api/v2/entries/en_US/showcased HTTP/1.1" 200 765 
+DEBUG - 2021-06-23 13:53:45,091 - urllib3.connectionpool - https://api.dictionaryapi.dev:443 "GET /api/v2/entries/en_US/pilots HTTP/1.1" 200 1949 
+DEBUG - 2021-06-23 13:53:45,105 - urllib3.connectionpool - https://api.dictionaryapi.dev:443 "GET /api/v2/entries/en_US/lineup HTTP/1.1" 200 618 
+DEBUG - 2021-06-23 13:53:45,125 - urllib3.connectionpool - https://api.dictionaryapi.dev:443 "GET /api/v2/entries/en_US/chop HTTP/1.1" 200 2280 
+DEBUG - 2021-06-23 13:53:45,135 - urllib3.connectionpool - https://api.dictionaryapi.dev:443 "GET /api/v2/entries/en_US/Lennon HTTP/1.1" 404 205 
+DEBUG - 2021-06-23 13:53:45,150 - urllib3.connectionpool - https://api.dictionaryapi.dev:443 "GET /api/v2/entries/en_US/Louder HTTP/1.1" 200 601 
+DEBUG - 2021-06-23 13:53:45,171 - urllib3.connectionpool - https://api.dictionaryapi.dev:443 "GET /api/v2/entries/en_US/retiring HTTP/1.1" 200 500 
+DEBUG - 2021-06-23 13:53:45,195 - urllib3.connectionpool - https://api.dictionaryapi.dev:443 "GET /api/v2/entries/en_US/Whoa HTTP/1.1" 200 450 
+DEBUG - 2021-06-23 13:53:45,205 - urllib3.connectionpool - https://api.dictionaryapi.dev:443 "GET /api/v2/entries/en_US/whoa HTTP/1.1" 200 450 
+DEBUG - 2021-06-23 13:53:45,222 - urllib3.connectionpool - https://api.dictionaryapi.dev:443 "GET /api/v2/entries/en_US/ophthalmology HTTP/1.1" 200 591 
+DEBUG - 2021-06-23 13:53:45,326 - urllib3.connectionpool - https://api.dictionaryapi.dev:443 "GET /api/v2/entries/en_US/resonated HTTP/1.1" 200 509 
+DEBUG - 2021-06-23 13:53:45,369 - urllib3.connectionpool - https://api.dictionaryapi.dev:443 "GET /api/v2/entries/en_US/jarring HTTP/1.1" 200 445 
+DEBUG - 2021-06-23 13:53:45,372 - urllib3.connectionpool - https://api.dictionaryapi.dev:443 "GET /api/v2/entries/en_US/flew HTTP/1.1" 200 2494 
+DEBUG - 2021-06-23 13:53:45,385 - urllib3.connectionpool - https://api.dictionaryapi.dev:443 "GET /api/v2/entries/en_US/prepares HTTP/1.1" 200 815 
+DEBUG - 2021-06-23 13:53:45,416 - urllib3.connectionpool - https://api.dictionaryapi.dev:443 "GET /api/v2/entries/en_US/leaks HTTP/1.1" 200 1438 
+DEBUG - 2021-06-23 13:53:45,417 - urllib3.connectionpool - https://api.dictionaryapi.dev:443 "GET /api/v2/entries/en_US/shoulders HTTP/1.1" 200 1123 
+DEBUG - 2021-06-23 13:53:45,427 - urllib3.connectionpool - https://api.dictionaryapi.dev:443 "GET /api/v2/entries/en_US/roofer HTTP/1.1" 200 472 
+DEBUG - 2021-06-23 13:53:45,439 - urllib3.connectionpool - https://api.dictionaryapi.dev:443 "GET /api/v2/entries/en_US/pathways HTTP/1.1" 200 532 
+DEBUG - 2021-06-23 13:53:45,459 - urllib3.connectionpool - https://api.dictionaryapi.dev:443 "GET /api/v2/entries/en_US/starstruck HTTP/1.1" 200 350 
+DEBUG - 2021-06-23 13:53:45,467 - urllib3.connectionpool - https://api.dictionaryapi.dev:443 "GET /api/v2/entries/en_US/imprinted HTTP/1.1" 200 1157 
+DEBUG - 2021-06-23 13:53:45,477 - urllib3.connectionpool - https://api.dictionaryapi.dev:443 "GET /api/v2/entries/en_US/zeitgeist HTTP/1.1" 200 480 
+DEBUG - 2021-06-23 13:53:45,601 - urllib3.connectionpool - https://api.dictionaryapi.dev:443 "GET /api/v2/entries/en_US/dropping HTTP/1.1" 200 2971 
+DEBUG - 2021-06-23 13:53:45,614 - urllib3.connectionpool - https://api.dictionaryapi.dev:443 "GET /api/v2/entries/en_US/yelling HTTP/1.1" 200 768 
+DEBUG - 2021-06-23 13:53:45,617 - urllib3.connectionpool - https://api.dictionaryapi.dev:443 "GET /api/v2/entries/en_US/rabbi HTTP/1.1" 200 580 
+DEBUG - 2021-06-23 13:53:45,633 - urllib3.connectionpool - https://api.dictionaryapi.dev:443 "GET /api/v2/entries/en_US/barricades HTTP/1.1" 200 905 
+DEBUG - 2021-06-23 13:53:45,671 - urllib3.connectionpool - https://api.dictionaryapi.dev:443 "GET /api/v2/entries/en_US/Smelly HTTP/1.1" 200 414 
+DEBUG - 2021-06-23 13:53:45,672 - urllib3.connectionpool - https://api.dictionaryapi.dev:443 "GET /api/v2/entries/en_US/Pervert HTTP/1.1" 200 885 
+DEBUG - 2021-06-23 13:53:45,692 - urllib3.connectionpool - https://api.dictionaryapi.dev:443 "GET /api/v2/entries/en_US/smelly HTTP/1.1" 200 414 
+DEBUG - 2021-06-23 13:53:45,695 - urllib3.connectionpool - https://api.dictionaryapi.dev:443 "GET /api/v2/entries/en_US/marry HTTP/1.1" 200 883 
+DEBUG - 2021-06-23 13:53:45,717 - urllib3.connectionpool - https://api.dictionaryapi.dev:443 "GET /api/v2/entries/en_US/shy HTTP/1.1" 200 2189 
+DEBUG - 2021-06-23 13:53:45,758 - urllib3.connectionpool - https://api.dictionaryapi.dev:443 "GET /api/v2/entries/en_US/pushes HTTP/1.1" 200 1883 
+DEBUG - 2021-06-23 13:53:45,765 - urllib3.connectionpool - https://api.dictionaryapi.dev:443 "GET /api/v2/entries/en_US/morale HTTP/1.1" 200 370 
+DEBUG - 2021-06-23 13:53:45,848 - urllib3.connectionpool - https://api.dictionaryapi.dev:443 "GET /api/v2/entries/en_US/Cheering HTTP/1.1" 200 295 
+DEBUG - 2021-06-23 13:53:45,848 - urllib3.connectionpool - https://api.dictionaryapi.dev:443 "GET /api/v2/entries/en_US/battling HTTP/1.1" 200 652 
+DEBUG - 2021-06-23 13:53:45,865 - urllib3.connectionpool - https://api.dictionaryapi.dev:443 "GET /api/v2/entries/en_US/howling HTTP/1.1" 200 421 
+DEBUG - 2021-06-23 13:53:45,876 - urllib3.connectionpool - https://api.dictionaryapi.dev:443 "GET /api/v2/entries/en_US/ballgame HTTP/1.1" 404 205 
+DEBUG - 2021-06-23 13:53:45,890 - urllib3.connectionpool - https://api.dictionaryapi.dev:443 "GET /api/v2/entries/en_US/hooked HTTP/1.1" 200 676 
+DEBUG - 2021-06-23 13:53:45,929 - urllib3.connectionpool - https://api.dictionaryapi.dev:443 "GET /api/v2/entries/en_US/proudest HTTP/1.1" 200 1349 
+DEBUG - 2021-06-23 13:53:45,949 - urllib3.connectionpool - https://api.dictionaryapi.dev:443 "GET /api/v2/entries/en_US/primates HTTP/1.1" 200 859 
+DEBUG - 2021-06-23 13:53:45,966 - urllib3.connectionpool - https://api.dictionaryapi.dev:443 "GET /api/v2/entries/en_US/troubles HTTP/1.1" 200 1310 
+DEBUG - 2021-06-23 13:53:45,972 - urllib3.connectionpool - https://api.dictionaryapi.dev:443 "GET /api/v2/entries/en_US/Marcel HTTP/1.1" 200 636 
+DEBUG - 2021-06-23 13:53:45,980 - urllib3.connectionpool - https://api.dictionaryapi.dev:443 "GET /api/v2/entries/en_US/inevitably HTTP/1.1" 200 537 
+DEBUG - 2021-06-23 13:53:46,001 - urllib3.connectionpool - https://api.dictionaryapi.dev:443 "GET /api/v2/entries/en_US/choreographed HTTP/1.1" 200 681 
+DEBUG - 2021-06-23 13:53:46,040 - urllib3.connectionpool - https://api.dictionaryapi.dev:443 "GET /api/v2/entries/en_US/timed HTTP/1.1" 200 1613 
+DEBUG - 2021-06-23 13:53:46,107 - urllib3.connectionpool - https://api.dictionaryapi.dev:443 "GET /api/v2/entries/en_US/messed HTTP/1.1" 200 1532 
+DEBUG - 2021-06-23 13:53:46,130 - urllib3.connectionpool - https://api.dictionaryapi.dev:443 "GET /api/v2/entries/en_US/resting HTTP/1.1" 200 2871 
+DEBUG - 2021-06-23 13:53:46,149 - urllib3.connectionpool - https://api.dictionaryapi.dev:443 "GET /api/v2/entries/en_US/grubs HTTP/1.1" 200 1225 
+DEBUG - 2021-06-23 13:53:46,217 - urllib3.connectionpool - https://api.dictionaryapi.dev:443 "GET /api/v2/entries/en_US/squirming HTTP/1.1" 200 712 
+DEBUG - 2021-06-23 13:53:46,286 - urllib3.connectionpool - https://api.dictionaryapi.dev:443 "GET /api/v2/entries/en_US/Geller HTTP/1.1" 404 205 
+DEBUG - 2021-06-23 13:53:46,286 - urllib3.connectionpool - https://api.dictionaryapi.dev:443 "GET /api/v2/entries/en_US/bleep HTTP/1.1" 200 752 
+DEBUG - 2021-06-23 13:53:46,296 - urllib3.connectionpool - https://api.dictionaryapi.dev:443 "GET /api/v2/entries/en_US/grubby HTTP/1.1" 200 366 
+DEBUG - 2021-06-23 13:53:46,305 - urllib3.connectionpool - https://api.dictionaryapi.dev:443 "GET /api/v2/entries/en_US/threw HTTP/1.1" 200 2359 
+DEBUG - 2021-06-23 13:53:46,308 - urllib3.connectionpool - https://api.dictionaryapi.dev:443 "GET /api/v2/entries/en_US/Eliot HTTP/1.1" 404 205 
+DEBUG - 2021-06-23 13:53:46,308 - urllib3.connectionpool - https://api.dictionaryapi.dev:443 "GET /api/v2/entries/en_US/Gould HTTP/1.1" 404 205 
+DEBUG - 2021-06-23 13:53:46,313 - urllib3.connectionpool - https://api.dictionaryapi.dev:443 "GET /api/v2/entries/en_US/Pickles HTTP/1.1" 200 1344 
+DEBUG - 2021-06-23 13:53:46,333 - urllib3.connectionpool - https://api.dictionaryapi.dev:443 "GET /api/v2/entries/en_US/behaving HTTP/1.1" 200 686 
+DEBUG - 2021-06-23 13:53:46,351 - urllib3.connectionpool - https://api.dictionaryapi.dev:443 "GET /api/v2/entries/en_US/downtime HTTP/1.1" 404 205 
+DEBUG - 2021-06-23 13:53:46,360 - urllib3.connectionpool - https://api.dictionaryapi.dev:443 "GET /api/v2/entries/en_US/cider HTTP/1.1" 200 362 
+DEBUG - 2021-06-23 13:53:46,387 - urllib3.connectionpool - https://api.dictionaryapi.dev:443 "GET /api/v2/entries/en_US/drank HTTP/1.1" 200 234 
+DEBUG - 2021-06-23 13:53:46,484 - urllib3.connectionpool - https://api.dictionaryapi.dev:443 "GET /api/v2/entries/en_US/hurrying HTTP/1.1" 200 855 
+DEBUG - 2021-06-23 13:53:46,550 - urllib3.connectionpool - https://api.dictionaryapi.dev:443 "GET /api/v2/entries/en_US/escalates HTTP/1.1" 200 391 
+DEBUG - 2021-06-23 13:53:46,551 - urllib3.connectionpool - https://api.dictionaryapi.dev:443 "GET /api/v2/entries/en_US/sits HTTP/1.1" 200 1312 
+DEBUG - 2021-06-23 13:53:46,579 - urllib3.connectionpool - https://api.dictionaryapi.dev:443 "GET /api/v2/entries/en_US/cushions HTTP/1.1" 200 1257 
+DEBUG - 2021-06-23 13:53:46,599 - urllib3.connectionpool - https://api.dictionaryapi.dev:443 "GET /api/v2/entries/en_US/lunges HTTP/1.1" 200 1338 
+DEBUG - 2021-06-23 13:53:46,600 - urllib3.connectionpool - https://api.dictionaryapi.dev:443 "GET /api/v2/entries/en_US/commando HTTP/1.1" 404 205 
+DEBUG - 2021-06-23 13:53:46,604 - urllib3.connectionpool - https://api.dictionaryapi.dev:443 "GET /api/v2/entries/en_US/Groans HTTP/1.1" 200 1001 
+DEBUG - 2021-06-23 13:53:46,615 - urllib3.connectionpool - https://api.dictionaryapi.dev:443 "GET /api/v2/entries/en_US/Firemen HTTP/1.1" 200 637 
+DEBUG - 2021-06-23 13:53:46,625 - urllib3.connectionpool - https://api.dictionaryapi.dev:443 "GET /api/v2/entries/en_US/firemen HTTP/1.1" 200 637 
+DEBUG - 2021-06-23 13:53:46,637 - urllib3.connectionpool - https://api.dictionaryapi.dev:443 "GET /api/v2/entries/en_US/jumps HTTP/1.1" 200 1553 
+DEBUG - 2021-06-23 13:53:46,646 - urllib3.connectionpool - https://api.dictionaryapi.dev:443 "GET /api/v2/entries/en_US/Ow HTTP/1.1" 200 367 
+DEBUG - 2021-06-23 13:53:46,670 - urllib3.connectionpool - https://api.dictionaryapi.dev:443 "GET /api/v2/entries/en_US/tripped HTTP/1.1" 200 2610 
+DEBUG - 2021-06-23 13:53:46,740 - urllib3.connectionpool - https://api.dictionaryapi.dev:443 "GET /api/v2/entries/en_US/ow HTTP/1.1" 200 367 
+DEBUG - 2021-06-23 13:53:46,797 - urllib3.connectionpool - https://api.dictionaryapi.dev:443 "GET /api/v2/entries/en_US/Gretchen HTTP/1.1" 404 205 
+DEBUG - 2021-06-23 13:53:46,807 - urllib3.connectionpool - https://api.dictionaryapi.dev:443 "GET /api/v2/entries/en_US/dislocated HTTP/1.1" 200 403 
+DEBUG - 2021-06-23 13:53:46,815 - urllib3.connectionpool - https://api.dictionaryapi.dev:443 "GET /api/v2/entries/en_US/paramedics HTTP/1.1" 200 406 
+DEBUG - 2021-06-23 13:53:46,883 - urllib3.connectionpool - https://api.dictionaryapi.dev:443 "GET /api/v2/entries/en_US/sling HTTP/1.1" 200 1351 
+DEBUG - 2021-06-23 13:53:46,886 - urllib3.connectionpool - https://api.dictionaryapi.dev:443 "GET /api/v2/entries/en_US/Thud HTTP/1.1" 200 663 
+DEBUG - 2021-06-23 13:53:46,893 - urllib3.connectionpool - https://api.dictionaryapi.dev:443 "GET /api/v2/entries/en_US/filming HTTP/1.1" 200 1108 
+DEBUG - 2021-06-23 13:53:46,895 - urllib3.connectionpool - https://api.dictionaryapi.dev:443 "GET /api/v2/entries/en_US/huddle HTTP/1.1" 200 622 
+DEBUG - 2021-06-23 13:53:46,909 - urllib3.connectionpool - https://api.dictionaryapi.dev:443 "GET /api/v2/entries/en_US/simplest HTTP/1.1" 200 1683 
+DEBUG - 2021-06-23 13:53:46,921 - urllib3.connectionpool - https://api.dictionaryapi.dev:443 "GET /api/v2/entries/en_US/waited HTTP/1.1" 200 1094 
+DEBUG - 2021-06-23 13:53:46,934 - urllib3.connectionpool - https://api.dictionaryapi.dev:443 "GET /api/v2/entries/en_US/hmm HTTP/1.1" 200 264 
+DEBUG - 2021-06-23 13:53:46,950 - urllib3.connectionpool - https://api.dictionaryapi.dev:443 "GET /api/v2/entries/en_US/crackling HTTP/1.1" 200 331 
+DEBUG - 2021-06-23 13:53:46,992 - urllib3.connectionpool - https://api.dictionaryapi.dev:443 "GET /api/v2/entries/en_US/buffet HTTP/1.1" 200 2056 
+DEBUG - 2021-06-23 13:53:47,046 - urllib3.connectionpool - https://api.dictionaryapi.dev:443 "GET /api/v2/entries/en_US/starving HTTP/1.1" 200 403 
+DEBUG - 2021-06-23 13:53:47,064 - urllib3.connectionpool - https://api.dictionaryapi.dev:443 "GET /api/v2/entries/en_US/rewarding HTTP/1.1" 200 478 
+DEBUG - 2021-06-23 13:53:47,083 - urllib3.connectionpool - https://api.dictionaryapi.dev:443 "GET /api/v2/entries/en_US/sweat HTTP/1.1" 200 1121 
+DEBUG - 2021-06-23 13:53:47,133 - urllib3.connectionpool - https://api.dictionaryapi.dev:443 "GET /api/v2/entries/en_US/listened HTTP/1.1" 200 548 
+DEBUG - 2021-06-23 13:53:47,153 - urllib3.connectionpool - https://api.dictionaryapi.dev:443 "GET /api/v2/entries/en_US/convulsions HTTP/1.1" 200 831 
+DEBUG - 2021-06-23 13:53:47,159 - urllib3.connectionpool - https://api.dictionaryapi.dev:443 "GET /api/v2/entries/en_US/hoo HTTP/1.1" 404 205 
+DEBUG - 2021-06-23 13:53:47,169 - urllib3.connectionpool - https://api.dictionaryapi.dev:443 "GET /api/v2/entries/en_US/kidding HTTP/1.1" 200 315 
+DEBUG - 2021-06-23 13:53:47,179 - urllib3.connectionpool - https://api.dictionaryapi.dev:443 "GET /api/v2/entries/en_US/afterward HTTP/1.1" 200 511 
+DEBUG - 2021-06-23 13:53:47,186 - urllib3.connectionpool - https://api.dictionaryapi.dev:443 "GET /api/v2/entries/en_US/rethought HTTP/1.1" 200 989 
+DEBUG - 2021-06-23 13:53:47,191 - urllib3.connectionpool - https://api.dictionaryapi.dev:443 "GET /api/v2/entries/en_US/ruminate HTTP/1.1" 200 741 
+DEBUG - 2021-06-23 13:53:47,216 - urllib3.connectionpool - https://api.dictionaryapi.dev:443 "GET /api/v2/entries/en_US/hiding HTTP/1.1" 200 814 
+DEBUG - 2021-06-23 13:53:47,233 - urllib3.connectionpool - https://api.dictionaryapi.dev:443 "GET /api/v2/entries/en_US/Inhales HTTP/1.1" 200 381 
+DEBUG - 2021-06-23 13:53:47,282 - urllib3.connectionpool - https://api.dictionaryapi.dev:443 "GET /api/v2/entries/en_US/hooking HTTP/1.1" 200 483 
+DEBUG - 2021-06-23 13:53:47,298 - urllib3.connectionpool - https://api.dictionaryapi.dev:443 "GET /api/v2/entries/en_US/funnier HTTP/1.1" 200 591 
+DEBUG - 2021-06-23 13:53:47,332 - urllib3.connectionpool - https://api.dictionaryapi.dev:443 "GET /api/v2/entries/en_US/farce HTTP/1.1" 200 491 
+DEBUG - 2021-06-23 13:53:47,365 - urllib3.connectionpool - https://api.dictionaryapi.dev:443 "GET /api/v2/entries/en_US/hurry HTTP/1.1" 200 868 
+DEBUG - 2021-06-23 13:53:47,515 - urllib3.connectionpool - https://api.dictionaryapi.dev:443 "GET /api/v2/entries/en_US/blown HTTP/1.1" 200 466 
+DEBUG - 2021-06-23 13:53:47,515 - urllib3.connectionpool - https://api.dictionaryapi.dev:443 "GET /api/v2/entries/en_US/vet HTTP/1.1" 200 915 
+DEBUG - 2021-06-23 13:53:47,531 - urllib3.connectionpool - https://api.dictionaryapi.dev:443 "GET /api/v2/entries/en_US/Hug HTTP/1.1" 200 832 
+DEBUG - 2021-06-23 13:53:47,542 - urllib3.connectionpool - https://api.dictionaryapi.dev:443 "GET /api/v2/entries/en_US/Shrieks HTTP/1.1" 200 937 
+DEBUG - 2021-06-23 13:53:47,557 - urllib3.connectionpool - https://api.dictionaryapi.dev:443 "GET /api/v2/entries/en_US/noses HTTP/1.1" 200 1411 
+DEBUG - 2021-06-23 13:53:47,558 - urllib3.connectionpool - https://api.dictionaryapi.dev:443 "GET /api/v2/entries/en_US/exits HTTP/1.1" 200 880 
+DEBUG - 2021-06-23 13:53:47,567 - urllib3.connectionpool - https://api.dictionaryapi.dev:443 "GET /api/v2/entries/en_US/mortified HTTP/1.1" 200 855 
+DEBUG - 2021-06-23 13:53:47,579 - urllib3.connectionpool - https://api.dictionaryapi.dev:443 "GET /api/v2/entries/en_US/sucked HTTP/1.1" 200 914 
+DEBUG - 2021-06-23 13:53:47,583 - urllib3.connectionpool - https://api.dictionaryapi.dev:443 "GET /api/v2/entries/en_US/enjoys HTTP/1.1" 200 911 
+DEBUG - 2021-06-23 13:53:47,597 - urllib3.connectionpool - https://api.dictionaryapi.dev:443 "GET /api/v2/entries/en_US/Maureen HTTP/1.1" 404 205 
+DEBUG - 2021-06-23 13:53:47,616 - urllib3.connectionpool - https://api.dictionaryapi.dev:443 "GET /api/v2/entries/en_US/slipping HTTP/1.1" 200 538 
+DEBUG - 2021-06-23 13:53:47,622 - urllib3.connectionpool - https://api.dictionaryapi.dev:443 "GET /api/v2/entries/en_US/smacking HTTP/1.1" 200 2292 
+DEBUG - 2021-06-23 13:53:47,763 - urllib3.connectionpool - https://api.dictionaryapi.dev:443 "GET /api/v2/entries/en_US/neurotic HTTP/1.1" 200 732 
+DEBUG - 2021-06-23 13:53:47,782 - urllib3.connectionpool - https://api.dictionaryapi.dev:443 "GET /api/v2/entries/en_US/couch HTTP/1.1" 200 1544 
+DEBUG - 2021-06-23 13:53:47,792 - urllib3.connectionpool - https://api.dictionaryapi.dev:443 "GET /api/v2/entries/en_US/overly HTTP/1.1" 200 403 
+DEBUG - 2021-06-23 13:53:47,796 - urllib3.connectionpool - https://api.dictionaryapi.dev:443 "GET /api/v2/entries/en_US/trousers HTTP/1.1" 200 480 
+DEBUG - 2021-06-23 13:53:47,824 - urllib3.connectionpool - https://api.dictionaryapi.dev:443 "GET /api/v2/entries/en_US/stairs HTTP/1.1" 200 316 
+DEBUG - 2021-06-23 13:53:47,828 - urllib3.connectionpool - https://api.dictionaryapi.dev:443 "GET /api/v2/entries/en_US/Pivot HTTP/1.1" 200 738 
+DEBUG - 2021-06-23 13:53:47,832 - urllib3.connectionpool - https://api.dictionaryapi.dev:443 "GET /api/v2/entries/en_US/pivot HTTP/1.1" 200 738 
+DEBUG - 2021-06-23 13:53:47,842 - urllib3.connectionpool - https://api.dictionaryapi.dev:443 "GET /api/v2/entries/en_US/stairwell HTTP/1.1" 200 321 
+DEBUG - 2021-06-23 13:53:47,843 - urllib3.connectionpool - https://api.dictionaryapi.dev:443 "GET /api/v2/entries/en_US/massively HTTP/1.1" 200 318 
+DEBUG - 2021-06-23 13:53:47,851 - urllib3.connectionpool - https://api.dictionaryapi.dev:443 "GET /api/v2/entries/en_US/funniest HTTP/1.1" 200 591 
+DEBUG - 2021-06-23 13:53:47,866 - urllib3.connectionpool - https://api.dictionaryapi.dev:443 "GET /api/v2/entries/en_US/yeti HTTP/1.1" 200 384 
+DEBUG - 2021-06-23 13:53:47,884 - urllib3.connectionpool - https://api.dictionaryapi.dev:443 "GET /api/v2/entries/en_US/tripping HTTP/1.1" 200 2610 
+DEBUG - 2021-06-23 13:53:47,995 - urllib3.connectionpool - https://api.dictionaryapi.dev:443 "GET /api/v2/entries/en_US/talker HTTP/1.1" 200 362 
+DEBUG - 2021-06-23 13:53:48,032 - urllib3.connectionpool - https://api.dictionaryapi.dev:443 "GET /api/v2/entries/en_US/bloopers HTTP/1.1" 404 205 
+DEBUG - 2021-06-23 13:53:48,033 - urllib3.connectionpool - https://api.dictionaryapi.dev:443 "GET /api/v2/entries/en_US/Yetis HTTP/1.1" 200 384 
+DEBUG - 2021-06-23 13:53:48,055 - urllib3.connectionpool - https://api.dictionaryapi.dev:443 "GET /api/v2/entries/en_US/talkers HTTP/1.1" 200 363 
+DEBUG - 2021-06-23 13:53:48,090 - urllib3.connectionpool - https://api.dictionaryapi.dev:443 "GET /api/v2/entries/en_US/rapped HTTP/1.1" 200 1376 
+DEBUG - 2021-06-23 13:53:48,097 - urllib3.connectionpool - https://api.dictionaryapi.dev:443 "GET /api/v2/entries/en_US/mitzvah HTTP/1.1" 200 683 
+DEBUG - 2021-06-23 13:53:48,107 - urllib3.connectionpool - https://api.dictionaryapi.dev:443 "GET /api/v2/entries/en_US/shout HTTP/1.1" 200 1024 
+DEBUG - 2021-06-23 13:53:48,122 - urllib3.connectionpool - https://api.dictionaryapi.dev:443 "GET /api/v2/entries/en_US/belie HTTP/1.1" 200 615 
+DEBUG - 2021-06-23 13:53:48,129 - urllib3.connectionpool - https://api.dictionaryapi.dev:443 "GET /api/v2/entries/en_US/asleep HTTP/1.1" 200 421 
+DEBUG - 2021-06-23 13:53:48,138 - urllib3.connectionpool - https://api.dictionaryapi.dev:443 "GET /api/v2/entries/en_US/robe HTTP/1.1" 200 535 
+DEBUG - 2021-06-23 13:53:48,143 - urllib3.connectionpool - https://api.dictionaryapi.dev:443 "GET /api/v2/entries/en_US/indistinctly HTTP/1.1" 200 159 
+DEBUG - 2021-06-23 13:53:48,145 - urllib3.connectionpool - https://api.dictionaryapi.dev:443 "GET /api/v2/entries/en_US/loudest HTTP/1.1" 200 601 
+DEBUG - 2021-06-23 13:53:48,249 - urllib3.connectionpool - https://api.dictionaryapi.dev:443 "GET /api/v2/entries/en_US/enjoyable HTTP/1.1" 200 674 
+DEBUG - 2021-06-23 13:53:48,279 - urllib3.connectionpool - https://api.dictionaryapi.dev:443 "GET /api/v2/entries/en_US/Maggie HTTP/1.1" 200 379 
+DEBUG - 2021-06-23 13:53:48,298 - urllib3.connectionpool - https://api.dictionaryapi.dev:443 "GET /api/v2/entries/en_US/Wheeler HTTP/1.1" 200 367 
+DEBUG - 2021-06-23 13:53:48,314 - urllib3.connectionpool - https://api.dictionaryapi.dev:443 "GET /api/v2/entries/en_US/Janice HTTP/1.1" 404 205 
+DEBUG - 2021-06-23 13:53:48,352 - urllib3.connectionpool - https://api.dictionaryapi.dev:443 "GET /api/v2/entries/en_US/perch HTTP/1.1" 200 1532 
+DEBUG - 2021-06-23 13:53:48,364 - urllib3.connectionpool - https://api.dictionaryapi.dev:443 "GET /api/v2/entries/en_US/thrill HTTP/1.1" 200 982 
+DEBUG - 2021-06-23 13:53:48,371 - urllib3.connectionpool - https://api.dictionaryapi.dev:443 "GET /api/v2/entries/en_US/Yorker HTTP/1.1" 200 288 
+DEBUG - 2021-06-23 13:53:48,383 - urllib3.connectionpool - https://api.dictionaryapi.dev:443 "GET /api/v2/entries/en_US/foghorn HTTP/1.1" 200 424 
+DEBUG - 2021-06-23 13:53:48,389 - urllib3.connectionpool - https://api.dictionaryapi.dev:443 "GET /api/v2/entries/en_US/obnoxiously HTTP/1.1" 200 153 
+DEBUG - 2021-06-23 13:53:48,392 - urllib3.connectionpool - https://api.dictionaryapi.dev:443 "GET /api/v2/entries/en_US/Gunther HTTP/1.1" 200 340 
+DEBUG - 2021-06-23 13:53:48,409 - urllib3.connectionpool - https://api.dictionaryapi.dev:443 "GET /api/v2/entries/en_US/inspiring HTTP/1.1" 200 293 
+DEBUG - 2021-06-23 13:53:48,417 - urllib3.connectionpool - https://api.dictionaryapi.dev:443 "GET /api/v2/entries/en_US/desperately HTTP/1.1" 200 367 
+DEBUG - 2021-06-23 13:53:48,496 - urllib3.connectionpool - https://api.dictionaryapi.dev:443 "GET /api/v2/entries/en_US/memorable HTTP/1.1" 200 496 
+DEBUG - 2021-06-23 13:53:48,513 - urllib3.connectionpool - https://api.dictionaryapi.dev:443 "GET /api/v2/entries/en_US/honestly HTTP/1.1" 200 828 
+DEBUG - 2021-06-23 13:53:48,547 - urllib3.connectionpool - https://api.dictionaryapi.dev:443 "GET /api/v2/entries/en_US/imagined HTTP/1.1" 200 350 
+DEBUG - 2021-06-23 13:53:48,580 - urllib3.connectionpool - https://api.dictionaryapi.dev:443 "GET /api/v2/entries/en_US/birthdays HTTP/1.1" 200 367 
+DEBUG - 2021-06-23 13:53:48,664 - urllib3.connectionpool - https://api.dictionaryapi.dev:443 "GET /api/v2/entries/en_US/cheeky HTTP/1.1" 200 601 
+DEBUG - 2021-06-23 13:53:48,717 - urllib3.connectionpool - https://api.dictionaryapi.dev:443 "GET /api/v2/entries/en_US/crush HTTP/1.1" 200 1655 
+DEBUG - 2021-06-23 13:53:48,737 - urllib3.connectionpool - https://api.dictionaryapi.dev:443 "GET /api/v2/entries/en_US/Bullshit HTTP/1.1" 404 205 
+DEBUG - 2021-06-23 13:53:48,737 - urllib3.connectionpool - https://api.dictionaryapi.dev:443 "GET /api/v2/entries/en_US/inconceivable HTTP/1.1" 200 626 
+DEBUG - 2021-06-23 13:53:48,758 - urllib3.connectionpool - https://api.dictionaryapi.dev:443 "GET /api/v2/entries/en_US/reciprocated HTTP/1.1" 200 607 
+DEBUG - 2021-06-23 13:53:48,770 - urllib3.connectionpool - https://api.dictionaryapi.dev:443 "GET /api/v2/entries/en_US/romances HTTP/1.1" 200 1926 
+DEBUG - 2021-06-23 13:53:48,774 - urllib3.connectionpool - https://api.dictionaryapi.dev:443 "GET /api/v2/entries/en_US/crossed HTTP/1.1" 200 2874 
+DEBUG - 2021-06-23 13:53:48,777 - urllib3.connectionpool - https://api.dictionaryapi.dev:443 "GET /api/v2/entries/en_US/crushing HTTP/1.1" 200 258 
+DEBUG - 2021-06-23 13:53:48,794 - urllib3.connectionpool - https://api.dictionaryapi.dev:443 "GET /api/v2/entries/en_US/Honestly HTTP/1.1" 200 828 
+DEBUG - 2021-06-23 13:53:48,796 - urllib3.connectionpool - https://api.dictionaryapi.dev:443 "GET /api/v2/entries/en_US/bummer HTTP/1.1" 200 653 
+DEBUG - 2021-06-23 13:53:48,815 - urllib3.connectionpool - https://api.dictionaryapi.dev:443 "GET /api/v2/entries/en_US/kissed HTTP/1.1" 200 872 
+DEBUG - 2021-06-23 13:53:48,848 - urllib3.connectionpool - https://api.dictionaryapi.dev:443 "GET /api/v2/entries/en_US/channeled HTTP/1.1" 200 361 
+DEBUG - 2021-06-23 13:53:48,914 - urllib3.connectionpool - https://api.dictionaryapi.dev:443 "GET /api/v2/entries/en_US/adoration HTTP/1.1" 200 561 
+DEBUG - 2021-06-23 13:53:48,945 - urllib3.connectionpool - https://api.dictionaryapi.dev:443 "GET /api/v2/entries/en_US/weeping HTTP/1.1" 200 319 
+DEBUG - 2021-06-23 13:53:49,000 - urllib3.connectionpool - https://api.dictionaryapi.dev:443 "GET /api/v2/entries/en_US/palpable HTTP/1.1" 200 787 
+DEBUG - 2021-06-23 13:53:49,030 - urllib3.connectionpool - https://api.dictionaryapi.dev:443 "GET /api/v2/entries/en_US/agitated HTTP/1.1" 200 517 
+DEBUG - 2021-06-23 13:53:49,050 - urllib3.connectionpool - https://api.dictionaryapi.dev:443 "GET /api/v2/entries/en_US/ninth HTTP/1.1" 200 273 
+DEBUG - 2021-06-23 13:53:49,065 - urllib3.connectionpool - https://api.dictionaryapi.dev:443 "GET /api/v2/entries/en_US/storms HTTP/1.1" 200 1762 
+DEBUG - 2021-06-23 13:53:49,069 - urllib3.connectionpool - https://api.dictionaryapi.dev:443 "GET /api/v2/entries/en_US/Crying HTTP/1.1" 200 589 
+DEBUG - 2021-06-23 13:53:49,076 - urllib3.connectionpool - https://api.dictionaryapi.dev:443 "GET /api/v2/entries/en_US/sailed HTTP/1.1" 200 298 
+DEBUG - 2021-06-23 13:53:49,083 - urllib3.connectionpool - https://api.dictionaryapi.dev:443 "GET /api/v2/entries/en_US/Furious HTTP/1.1" 200 529 
+DEBUG - 2021-06-23 13:53:49,085 - urllib3.connectionpool - https://api.dictionaryapi.dev:443 "GET /api/v2/entries/en_US/Sighs HTTP/1.1" 200 588 
+DEBUG - 2021-06-23 13:53:49,107 - urllib3.connectionpool - https://api.dictionaryapi.dev:443 "GET /api/v2/entries/en_US/leans HTTP/1.1" 200 1490 
+DEBUG - 2021-06-23 13:53:49,113 - urllib3.connectionpool - https://api.dictionaryapi.dev:443 "GET /api/v2/entries/en_US/startled HTTP/1.1" 200 244 
+DEBUG - 2021-06-23 13:53:49,180 - urllib3.connectionpool - https://api.dictionaryapi.dev:443 "GET /api/v2/entries/en_US/staring HTTP/1.1" 200 534 
+DEBUG - 2021-06-23 13:53:49,186 - urllib3.connectionpool - https://api.dictionaryapi.dev:443 "GET /api/v2/entries/en_US/gaze HTTP/1.1" 200 605 
+DEBUG - 2021-06-23 13:53:49,232 - urllib3.connectionpool - https://api.dictionaryapi.dev:443 "GET /api/v2/entries/en_US/unlocks HTTP/1.1" 200 701 
+DEBUG - 2021-06-23 13:53:49,278 - urllib3.connectionpool - https://api.dictionaryapi.dev:443 "GET /api/v2/entries/en_US/rattles HTTP/1.1" 200 1138 
+DEBUG - 2021-06-23 13:53:49,326 - urllib3.connectionpool - https://api.dictionaryapi.dev:443 "GET /api/v2/entries/en_US/flies HTTP/1.1" 200 2494 
+DEBUG - 2021-06-23 13:53:49,357 - urllib3.connectionpool - https://api.dictionaryapi.dev:443 "GET /api/v2/entries/en_US/cuddle HTTP/1.1" 200 584 
+DEBUG - 2021-06-23 13:53:49,364 - urllib3.connectionpool - https://api.dictionaryapi.dev:443 "GET /api/v2/entries/en_US/rehearsal HTTP/1.1" 200 485 
+DEBUG - 2021-06-23 13:53:49,373 - urllib3.connectionpool - https://api.dictionaryapi.dev:443 "GET /api/v2/entries/en_US/spoon HTTP/1.1" 200 973 
+DEBUG - 2021-06-23 13:53:49,379 - urllib3.connectionpool - https://api.dictionaryapi.dev:443 "GET /api/v2/entries/en_US/grabs HTTP/1.1" 200 1181 
+DEBUG - 2021-06-23 13:53:49,394 - urllib3.connectionpool - https://api.dictionaryapi.dev:443 "GET /api/v2/entries/en_US/rushes HTTP/1.1" 200 2005 
+DEBUG - 2021-06-23 13:53:49,403 - urllib3.connectionpool - https://api.dictionaryapi.dev:443 "GET /api/v2/entries/en_US/quacking HTTP/1.1" 200 909 
+DEBUG - 2021-06-23 13:53:49,422 - urllib3.connectionpool - https://api.dictionaryapi.dev:443 "GET /api/v2/entries/en_US/Stiller HTTP/1.1" 200 2054 
+DEBUG - 2021-06-23 13:53:49,433 - urllib3.connectionpool - https://api.dictionaryapi.dev:443 "GET /api/v2/entries/en_US/quack HTTP/1.1" 200 942 
+DEBUG - 2021-06-23 13:53:49,434 - urllib3.connectionpool - https://api.dictionaryapi.dev:443 "GET /api/v2/entries/en_US/Dodo HTTP/1.1" 200 486 
+DEBUG - 2021-06-23 13:53:49,569 - urllib3.connectionpool - https://api.dictionaryapi.dev:443 "GET /api/v2/entries/en_US/Pitt HTTP/1.1" 200 227 
+DEBUG - 2021-06-23 13:53:49,570 - urllib3.connectionpool - https://api.dictionaryapi.dev:443 "GET /api/v2/entries/en_US/fella HTTP/1.1" 200 133 
+DEBUG - 2021-06-23 13:53:49,571 - urllib3.connectionpool - https://api.dictionaryapi.dev:443 "GET /api/v2/entries/en_US/chickadee HTTP/1.1" 200 548 
+DEBUG - 2021-06-23 13:53:49,598 - urllib3.connectionpool - https://api.dictionaryapi.dev:443 "GET /api/v2/entries/en_US/idols HTTP/1.1" 200 494 
+DEBUG - 2021-06-23 13:53:49,611 - urllib3.connectionpool - https://api.dictionaryapi.dev:443 "GET /api/v2/entries/en_US/Sputnik HTTP/1.1" 200 511 
+DEBUG - 2021-06-23 13:53:49,743 - urllib3.connectionpool - https://api.dictionaryapi.dev:443 "GET /api/v2/entries/en_US/outfits HTTP/1.1" 200 960 
+DEBUG - 2021-06-23 13:53:49,767 - urllib3.connectionpool - https://api.dictionaryapi.dev:443 "GET /api/v2/entries/en_US/Marry HTTP/1.1" 200 883 
+DEBUG - 2021-06-23 13:53:49,769 - urllib3.connectionpool - https://api.dictionaryapi.dev:443 "GET /api/v2/entries/en_US/tempo HTTP/1.1" 200 796 
+DEBUG - 2021-06-23 13:53:49,773 - urllib3.connectionpool - https://api.dictionaryapi.dev:443 "GET /api/v2/entries/en_US/Mindy HTTP/1.1" 404 205 
+DEBUG - 2021-06-23 13:53:49,779 - urllib3.connectionpool - https://api.dictionaryapi.dev:443 "GET /api/v2/entries/en_US/Cara HTTP/1.1" 404 205 
+DEBUG - 2021-06-23 13:53:49,788 - urllib3.connectionpool - https://api.dictionaryapi.dev:443 "GET /api/v2/entries/en_US/Cue HTTP/1.1" 200 1220 
+DEBUG - 2021-06-23 13:53:49,789 - urllib3.connectionpool - https://api.dictionaryapi.dev:443 "GET /api/v2/entries/en_US/bridesmaid HTTP/1.1" 200 388 
+DEBUG - 2021-06-23 13:53:49,817 - urllib3.connectionpool - https://api.dictionaryapi.dev:443 "GET /api/v2/entries/en_US/Armadillo HTTP/1.1" 404 205 
+DEBUG - 2021-06-23 13:53:49,823 - urllib3.connectionpool - https://api.dictionaryapi.dev:443 "GET /api/v2/entries/en_US/understated HTTP/1.1" 200 373 
+DEBUG - 2021-06-23 13:53:49,831 - urllib3.connectionpool - https://api.dictionaryapi.dev:443 "GET /api/v2/entries/en_US/astonishing HTTP/1.1" 200 449 
+DEBUG - 2021-06-23 13:53:49,834 - urllib3.connectionpool - https://api.dictionaryapi.dev:443 "GET /api/v2/entries/en_US/farewell HTTP/1.1" 200 567 
+DEBUG - 2021-06-23 13:53:49,890 - urllib3.connectionpool - https://api.dictionaryapi.dev:443 "GET /api/v2/entries/en_US/Gasps HTTP/1.1" 200 766 
+DEBUG - 2021-06-23 13:53:50,001 - urllib3.connectionpool - https://api.dictionaryapi.dev:443 "GET /api/v2/entries/en_US/ambivalent HTTP/1.1" 200 653 
+DEBUG - 2021-06-23 13:53:50,039 - urllib3.connectionpool - https://api.dictionaryapi.dev:443 "GET /api/v2/entries/en_US/Beep HTTP/1.1" 200 700 
+DEBUG - 2021-06-23 13:53:50,048 - urllib3.connectionpool - https://api.dictionaryapi.dev:443 "GET /api/v2/entries/en_US/savor HTTP/1.1" 200 880 
+DEBUG - 2021-06-23 13:53:50,051 - urllib3.connectionpool - https://api.dictionaryapi.dev:443 "GET /api/v2/entries/en_US/Rewinding HTTP/1.1" 200 563 
+DEBUG - 2021-06-23 13:53:50,060 - urllib3.connectionpool - https://api.dictionaryapi.dev:443 "GET /api/v2/entries/en_US/endings HTTP/1.1" 200 399 
+DEBUG - 2021-06-23 13:53:50,075 - urllib3.connectionpool - https://api.dictionaryapi.dev:443 "GET /api/v2/entries/en_US/arrivederci HTTP/1.1" 200 247 
+DEBUG - 2021-06-23 13:53:50,082 - urllib3.connectionpool - https://api.dictionaryapi.dev:443 "GET /api/v2/entries/en_US/Claps HTTP/1.1" 200 1228 
+DEBUG - 2021-06-23 13:53:50,103 - urllib3.connectionpool - https://api.dictionaryapi.dev:443 "GET /api/v2/entries/en_US/flats HTTP/1.1" 200 3355 
+DEBUG - 2021-06-23 13:53:50,105 - urllib3.connectionpool - https://api.dictionaryapi.dev:443 "GET /api/v2/entries/en_US/contemplate HTTP/1.1" 200 490 
+DEBUG - 2021-06-23 13:53:50,109 - urllib3.connectionpool - https://api.dictionaryapi.dev:443 "GET /api/v2/entries/en_US/impromptu HTTP/1.1" 200 943 
+DEBUG - 2021-06-23 13:53:50,112 - urllib3.connectionpool - https://api.dictionaryapi.dev:443 "GET /api/v2/entries/en_US/nicely HTTP/1.1" 200 414 
+DEBUG - 2021-06-23 13:53:50,144 - urllib3.connectionpool - https://api.dictionaryapi.dev:443 "GET /api/v2/entries/en_US/unravel HTTP/1.1" 200 888 
+DEBUG - 2021-06-23 13:53:50,247 - urllib3.connectionpool - https://api.dictionaryapi.dev:443 "GET /api/v2/entries/en_US/unraveled HTTP/1.1" 200 876 
+DEBUG - 2021-06-23 13:53:50,280 - urllib3.connectionpool - https://api.dictionaryapi.dev:443 "GET /api/v2/entries/en_US/paleontology HTTP/1.1" 200 472 
+DEBUG - 2021-06-23 13:53:50,303 - urllib3.connectionpool - https://api.dictionaryapi.dev:443 "GET /api/v2/entries/en_US/bake HTTP/1.1" 200 1245 
+DEBUG - 2021-06-23 13:53:50,312 - urllib3.connectionpool - https://api.dictionaryapi.dev:443 "GET /api/v2/entries/en_US/paleontologist HTTP/1.1" 404 205 
+DEBUG - 2021-06-23 13:53:50,312 - urllib3.connectionpool - https://api.dictionaryapi.dev:443 "GET /api/v2/entries/en_US/Paleontology HTTP/1.1" 200 472 
+DEBUG - 2021-06-23 13:53:50,339 - urllib3.connectionpool - https://api.dictionaryapi.dev:443 "GET /api/v2/entries/en_US/factored HTTP/1.1" 200 1744 
+DEBUG - 2021-06-23 13:53:50,343 - urllib3.connectionpool - https://api.dictionaryapi.dev:443 "GET /api/v2/entries/en_US/PTA HTTP/1.1" 200 230 
+DEBUG - 2021-06-23 13:53:50,360 - urllib3.connectionpool - https://api.dictionaryapi.dev:443 "GET /api/v2/entries/en_US/dinners HTTP/1.1" 200 352 
+DEBUG - 2021-06-23 13:53:50,388 - urllib3.connectionpool - https://api.dictionaryapi.dev:443 "GET /api/v2/entries/en_US/cries HTTP/1.1" 200 1867 
+DEBUG - 2021-06-23 13:53:50,394 - urllib3.connectionpool - https://api.dictionaryapi.dev:443 "GET /api/v2/entries/en_US/Shouting HTTP/1.1" 200 1016 
+DEBUG - 2021-06-23 13:53:50,395 - urllib3.connectionpool - https://api.dictionaryapi.dev:443 "GET /api/v2/entries/en_US/Chuckles HTTP/1.1" 200 668 
+DEBUG - 2021-06-23 13:53:50,414 - urllib3.connectionpool - https://api.dictionaryapi.dev:443 "GET /api/v2/entries/en_US/thankful HTTP/1.1" 200 340 
+DEBUG - 2021-06-23 13:53:50,520 - urllib3.connectionpool - https://api.dictionaryapi.dev:443 "GET /api/v2/entries/en_US/bumped HTTP/1.1" 200 2050 
+DEBUG - 2021-06-23 13:53:50,526 - urllib3.connectionpool - https://api.dictionaryapi.dev:443 "GET /api/v2/entries/en_US/Kleenex HTTP/1.1" 200 359 
+WARNING - 2021-06-23 13:53:50,526 - urllib3.connectionpool - Connection pool is full, discarding connection: api.dictionaryapi.dev 
+DEBUG - 2021-06-23 13:53:50,526 - urllib3.connectionpool - https://api.dictionaryapi.dev:443 "GET /api/v2/entries/en_US/apologized HTTP/1.1" 200 512 
+WARNING - 2021-06-23 13:53:50,526 - urllib3.connectionpool - Connection pool is full, discarding connection: api.dictionaryapi.dev 
+ERROR - 2021-06-23 13:53:50,681 - root - string indices must be integers while writing summary in online dict 
+ERROR - 2021-06-23 13:53:50,681 - root - string indices must be integers while writing summary in online dict 
+ERROR - 2021-06-23 13:53:50,681 - root - string indices must be integers while writing summary in online dict 
+ERROR - 2021-06-23 13:53:50,681 - root - string indices must be integers while writing summary in online dict 
+ERROR - 2021-06-23 13:53:50,681 - root - string indices must be integers while writing summary in online dict 
+ERROR - 2021-06-23 13:53:50,681 - root - string indices must be integers while writing summary in online dict 
+ERROR - 2021-06-23 13:53:50,681 - root - string indices must be integers while writing summary in online dict 
+ERROR - 2021-06-23 13:53:50,681 - root - string indices must be integers while writing summary in online dict 
+ERROR - 2021-06-23 13:53:50,681 - root - string indices must be integers while writing summary in online dict 
+ERROR - 2021-06-23 13:53:50,681 - root - string indices must be integers while writing summary in online dict 
+ERROR - 2021-06-23 13:53:50,681 - root - string indices must be integers while writing summary in online dict 
+ERROR - 2021-06-23 13:53:50,693 - root - string indices must be integers while writing summary in online dict 
+ERROR - 2021-06-23 13:53:50,694 - root - string indices must be integers while writing summary in online dict 
+ERROR - 2021-06-23 13:53:50,694 - root - string indices must be integers while writing summary in online dict 
+ERROR - 2021-06-23 13:53:50,694 - root - string indices must be integers while writing summary in online dict 
+ERROR - 2021-06-23 13:53:50,694 - root - string indices must be integers while writing summary in online dict 
+ERROR - 2021-06-23 13:53:50,694 - root - string indices must be integers while writing summary in online dict 
+ERROR - 2021-06-23 13:53:50,694 - root - string indices must be integers while writing summary in online dict 
+ERROR - 2021-06-23 13:53:50,694 - root - string indices must be integers while writing summary in online dict 
+ERROR - 2021-06-23 13:53:50,694 - root - string indices must be integers while writing summary in online dict 
+ERROR - 2021-06-23 13:53:50,694 - root - string indices must be integers while writing summary in online dict 
+ERROR - 2021-06-23 13:53:50,694 - root - string indices must be integers while writing summary in online dict 
+ERROR - 2021-06-23 13:53:50,694 - root - string indices must be integers while writing summary in online dict 
+ERROR - 2021-06-23 13:53:50,694 - root - string indices must be integers while writing summary in online dict 
+ERROR - 2021-06-23 13:53:50,711 - root - string indices must be integers while writing summary in online dict 
+ERROR - 2021-06-23 13:53:50,711 - root - string indices must be integers while writing summary in online dict 
+ERROR - 2021-06-23 13:53:50,711 - root - string indices must be integers while writing summary in online dict 
+ERROR - 2021-06-23 13:53:50,711 - root - string indices must be integers while writing summary in online dict 
+ERROR - 2021-06-23 13:53:50,711 - root - string indices must be integers while writing summary in online dict 
+ERROR - 2021-06-23 13:53:51,826 - root - string indices must be integers in Thread update word dict None 
+ERROR - 2021-06-23 13:53:51,826 - root - string indices must be integers in Thread update word dict None 
+ERROR - 2021-06-23 13:53:51,826 - root - string indices must be integers in Thread update word dict None 
+ERROR - 2021-06-23 13:53:51,840 - root - string indices must be integers in Thread update word dict None 
+ERROR - 2021-06-23 13:53:51,841 - root - string indices must be integers in Thread update word dict None 
+ERROR - 2021-06-23 13:53:51,841 - root - string indices must be integers in Thread update word dict None 
+ERROR - 2021-06-23 13:53:51,842 - root - string indices must be integers in Thread update word dict None 
+ERROR - 2021-06-23 13:53:51,842 - root - string indices must be integers in Thread update word dict None 
+ERROR - 2021-06-23 13:53:51,842 - root - string indices must be integers in Thread update word dict None 
+ERROR - 2021-06-23 13:53:51,842 - root - string indices must be integers in Thread update word dict None 
+ERROR - 2021-06-23 13:53:51,842 - root - string indices must be integers in Thread update word dict None 
+ERROR - 2021-06-23 13:53:51,842 - root - string indices must be integers in Thread update word dict None 
+ERROR - 2021-06-23 13:53:51,843 - root - string indices must be integers in Thread update word dict None 
+ERROR - 2021-06-23 13:53:51,843 - root - string indices must be integers in Thread update word dict None 
+ERROR - 2021-06-23 13:53:51,843 - root - string indices must be integers in Thread update word dict None 
+ERROR - 2021-06-23 13:53:51,843 - root - string indices must be integers in Thread update word dict None 
+ERROR - 2021-06-23 13:53:51,843 - root - string indices must be integers in Thread update word dict None 
+ERROR - 2021-06-23 13:53:51,843 - root - string indices must be integers in Thread update word dict None 
+ERROR - 2021-06-23 13:53:51,843 - root - string indices must be integers in Thread update word dict None 
+ERROR - 2021-06-23 13:53:51,843 - root - string indices must be integers in Thread update word dict None 
+ERROR - 2021-06-23 13:53:51,843 - root - string indices must be integers in Thread update word dict None 
+ERROR - 2021-06-23 13:53:51,843 - root - string indices must be integers in Thread update word dict None 
+ERROR - 2021-06-23 13:53:51,843 - root - string indices must be integers in Thread update word dict None 
+ERROR - 2021-06-23 13:53:51,843 - root - string indices must be integers in Thread update word dict None 
+ERROR - 2021-06-23 13:53:51,843 - root - string indices must be integers in Thread update word dict None 
+ERROR - 2021-06-23 13:53:51,843 - root - string indices must be integers in Thread update word dict None 
+ERROR - 2021-06-23 13:53:51,843 - root - string indices must be integers in Thread update word dict None 
+ERROR - 2021-06-23 13:53:51,843 - root - string indices must be integers in Thread update word dict None 
+ERROR - 2021-06-23 13:53:51,843 - root - string indices must be integers in Thread update word dict None 
+ERROR - 2021-06-23 13:53:51,843 - root - string indices must be integers in Thread update word dict None 
+ERROR - 2021-06-23 13:53:51,849 - root - list index out of range in Thread update word dict None 
+ERROR - 2021-06-23 13:53:51,849 - root - list index out of range in Thread update word dict None 
+ERROR - 2021-06-23 13:53:51,849 - root - list index out of range in Thread update word dict None 
+ERROR - 2021-06-23 13:53:51,849 - root - list index out of range in Thread update word dict None 
+ERROR - 2021-06-23 13:53:51,850 - root - list index out of range in Thread update word dict None 
+ERROR - 2021-06-23 13:53:51,850 - root - list index out of range in Thread update word dict None 
+ERROR - 2021-06-23 13:53:51,850 - root - list index out of range in Thread update word dict None 
+ERROR - 2021-06-23 13:53:51,850 - root - list index out of range in Thread update word dict None 
+ERROR - 2021-06-23 13:53:51,851 - root - string indices must be integers in Thread update word dict None 
+ERROR - 2021-06-23 13:53:51,851 - root - string indices must be integers in Thread update word dict None 
+ERROR - 2021-06-23 13:53:51,851 - root - string indices must be integers in Thread update word dict None 
+ERROR - 2021-06-23 13:53:51,851 - root - string indices must be integers in Thread update word dict None 
+ERROR - 2021-06-23 13:53:51,851 - root - string indices must be integers in Thread update word dict None 
+ERROR - 2021-06-23 13:53:51,851 - root - string indices must be integers in Thread update word dict None 
+ERROR - 2021-06-23 13:53:51,851 - root - string indices must be integers in Thread update word dict None 
+ERROR - 2021-06-23 13:53:51,851 - root - string indices must be integers in Thread update word dict None 
+ERROR - 2021-06-23 13:53:51,851 - root - string indices must be integers in Thread update word dict None 
+ERROR - 2021-06-23 13:53:51,851 - root - string indices must be integers in Thread update word dict None 
+ERROR - 2021-06-23 13:53:51,851 - root - string indices must be integers in Thread update word dict None 
+ERROR - 2021-06-23 13:53:51,851 - root - string indices must be integers in Thread update word dict None 
+ERROR - 2021-06-23 13:53:51,851 - root - string indices must be integers in Thread update word dict None 
+ERROR - 2021-06-23 13:53:51,856 - root - string indices must be integers in Thread update word dict None 
+ERROR - 2021-06-23 13:53:51,856 - root - string indices must be integers in Thread update word dict None 
+ERROR - 2021-06-23 13:53:51,857 - root - string indices must be integers in Thread update word dict None 
+ERROR - 2021-06-23 13:53:51,857 - root - string indices must be integers in Thread update word dict None 
+ERROR - 2021-06-23 13:53:51,857 - root - string indices must be integers in Thread update word dict None 
+ERROR - 2021-06-23 13:53:51,857 - root - string indices must be integers in Thread update word dict None 
+ERROR - 2021-06-23 13:53:51,857 - root - string indices must be integers in Thread update word dict None 
+ERROR - 2021-06-23 13:53:51,857 - root - string indices must be integers in Thread update word dict None 
+ERROR - 2021-06-23 13:53:51,857 - root - string indices must be integers in Thread update word dict None 
+ERROR - 2021-06-23 13:53:51,857 - root - string indices must be integers in Thread update word dict None 
+ERROR - 2021-06-23 13:53:51,857 - root - string indices must be integers in Thread update word dict None 
+ERROR - 2021-06-23 13:53:51,857 - root - string indices must be integers in Thread update word dict None 
+ERROR - 2021-06-23 13:53:51,857 - root - string indices must be integers in Thread update word dict None 
+ERROR - 2021-06-23 13:53:51,857 - root - string indices must be integers in Thread update word dict None 
+ERROR - 2021-06-23 13:53:51,857 - root - string indices must be integers in Thread update word dict None 
+ERROR - 2021-06-23 13:53:51,857 - root - string indices must be integers in Thread update word dict None 
+ERROR - 2021-06-23 13:53:51,857 - root - string indices must be integers in Thread update word dict None 
+ERROR - 2021-06-23 13:53:51,857 - root - string indices must be integers in Thread update word dict None 
+ERROR - 2021-06-23 13:53:51,857 - root - string indices must be integers in Thread update word dict None 
+ERROR - 2021-06-23 13:53:51,857 - root - string indices must be integers in Thread update word dict None 
+ERROR - 2021-06-23 13:53:51,857 - root - string indices must be integers in Thread update word dict None 
+ERROR - 2021-06-23 13:53:51,857 - root - string indices must be integers in Thread update word dict None 
+ERROR - 2021-06-23 13:53:51,857 - root - string indices must be integers in Thread update word dict None 
+ERROR - 2021-06-23 13:53:51,857 - root - string indices must be integers in Thread update word dict None 
+ERROR - 2021-06-23 13:53:51,857 - root - string indices must be integers in Thread update word dict None 
+ERROR - 2021-06-23 13:53:51,857 - root - string indices must be integers in Thread update word dict None 
+ERROR - 2021-06-23 13:53:51,857 - root - string indices must be integers in Thread update word dict None 
+ERROR - 2021-06-23 13:53:51,857 - root - string indices must be integers in Thread update word dict None 
+ERROR - 2021-06-23 13:53:51,857 - root - string indices must be integers in Thread update word dict None 
+ERROR - 2021-06-23 13:53:51,857 - root - string indices must be integers in Thread update word dict None 
+ERROR - 2021-06-23 13:53:51,857 - root - string indices must be integers in Thread update word dict None 
+ERROR - 2021-06-23 13:53:51,857 - root - string indices must be integers in Thread update word dict None 
+ERROR - 2021-06-23 13:53:51,857 - root - string indices must be integers in Thread update word dict None 
+ERROR - 2021-06-23 13:53:51,857 - root - string indices must be integers in Thread update word dict None 
+ERROR - 2021-06-23 13:53:51,857 - root - string indices must be integers in Thread update word dict None 
+ERROR - 2021-06-23 13:53:51,857 - root - string indices must be integers in Thread update word dict None 
+ERROR - 2021-06-23 13:53:51,857 - root - string indices must be integers in Thread update word dict None 
+ERROR - 2021-06-23 13:53:51,857 - root - string indices must be integers in Thread update word dict None 
+ERROR - 2021-06-23 13:53:51,857 - root - string indices must be integers in Thread update word dict None 
+ERROR - 2021-06-23 13:53:51,857 - root - string indices must be integers in Thread update word dict None 
+ERROR - 2021-06-23 13:53:51,857 - root - string indices must be integers in Thread update word dict None 
+ERROR - 2021-06-23 13:53:51,857 - root - string indices must be integers in Thread update word dict None 
+ERROR - 2021-06-23 13:53:51,857 - root - string indices must be integers in Thread update word dict None 
+ERROR - 2021-06-23 13:53:51,857 - root - string indices must be integers in Thread update word dict None 
+ERROR - 2021-06-23 13:53:51,857 - root - string indices must be integers in Thread update word dict None 
+ERROR - 2021-06-23 13:53:51,857 - root - string indices must be integers in Thread update word dict None 
+ERROR - 2021-06-23 13:53:51,857 - root - string indices must be integers in Thread update word dict None 
+ERROR - 2021-06-23 13:53:51,873 - root - string indices must be integers in Thread update word dict None 
+ERROR - 2021-06-23 13:53:51,873 - root - string indices must be integers in Thread update word dict None 
+ERROR - 2021-06-23 13:53:51,873 - root - string indices must be integers in Thread update word dict None 
+ERROR - 2021-06-23 13:53:51,873 - root - string indices must be integers in Thread update word dict None 
+ERROR - 2021-06-23 13:53:51,873 - root - string indices must be integers in Thread update word dict None 
+ERROR - 2021-06-23 13:53:51,874 - root - string indices must be integers in Thread update word dict None 
+ERROR - 2021-06-23 13:53:51,874 - root - string indices must be integers in Thread update word dict None 
+ERROR - 2021-06-23 13:53:51,874 - root - string indices must be integers in Thread update word dict None 
+ERROR - 2021-06-23 13:53:51,874 - root - string indices must be integers in Thread update word dict None 
+ERROR - 2021-06-23 13:53:51,874 - root - string indices must be integers in Thread update word dict None 
+ERROR - 2021-06-23 13:53:51,874 - root - string indices must be integers in Thread update word dict None 
+ERROR - 2021-06-23 13:53:51,874 - root - string indices must be integers in Thread update word dict None 
+ERROR - 2021-06-23 13:53:51,874 - root - string indices must be integers in Thread update word dict None 
+ERROR - 2021-06-23 13:53:51,874 - root - string indices must be integers in Thread update word dict None 
+ERROR - 2021-06-23 13:53:51,874 - root - string indices must be integers in Thread update word dict None 
+ERROR - 2021-06-23 13:53:51,874 - root - string indices must be integers in Thread update word dict None 
+ERROR - 2021-06-23 13:53:51,874 - root - string indices must be integers in Thread update word dict None 
+ERROR - 2021-06-23 13:53:51,874 - root - string indices must be integers in Thread update word dict None 
+ERROR - 2021-06-23 13:53:51,874 - root - string indices must be integers in Thread update word dict None 
+ERROR - 2021-06-23 13:53:51,874 - root - string indices must be integers in Thread update word dict None 
+ERROR - 2021-06-23 13:53:51,874 - root - string indices must be integers in Thread update word dict None 
+ERROR - 2021-06-23 13:53:51,874 - root - string indices must be integers in Thread update word dict None 
+ERROR - 2021-06-23 13:53:51,874 - root - string indices must be integers in Thread update word dict None 
+ERROR - 2021-06-23 13:53:51,874 - root - string indices must be integers in Thread update word dict None 
+ERROR - 2021-06-23 13:53:51,874 - root - string indices must be integers in Thread update word dict None 
+ERROR - 2021-06-23 13:53:51,874 - root - string indices must be integers in Thread update word dict None 
+ERROR - 2021-06-23 13:53:51,874 - root - string indices must be integers in Thread update word dict None 
+ERROR - 2021-06-23 13:53:51,874 - root - string indices must be integers in Thread update word dict None 
+ERROR - 2021-06-23 13:53:51,874 - root - string indices must be integers in Thread update word dict None 
+ERROR - 2021-06-23 13:53:51,874 - root - string indices must be integers in Thread update word dict None 
+ERROR - 2021-06-23 13:53:51,874 - root - string indices must be integers in Thread update word dict None 
+ERROR - 2021-06-23 13:53:51,874 - root - string indices must be integers in Thread update word dict None 
+ERROR - 2021-06-23 13:53:51,874 - root - string indices must be integers in Thread update word dict None 
+ERROR - 2021-06-23 13:53:51,874 - root - string indices must be integers in Thread update word dict None 
+ERROR - 2021-06-23 13:53:51,874 - root - string indices must be integers in Thread update word dict None 
+ERROR - 2021-06-23 13:53:51,874 - root - string indices must be integers in Thread update word dict None 
+ERROR - 2021-06-23 13:53:51,874 - root - string indices must be integers in Thread update word dict None 
+ERROR - 2021-06-23 13:53:51,874 - root - string indices must be integers in Thread update word dict None 
+ERROR - 2021-06-23 13:53:51,874 - root - string indices must be integers in Thread update word dict None 
+ERROR - 2021-06-23 13:53:51,874 - root - string indices must be integers in Thread update word dict None 
+ERROR - 2021-06-23 13:53:51,874 - root - string indices must be integers in Thread update word dict None 
+ERROR - 2021-06-23 13:53:51,874 - root - string indices must be integers in Thread update word dict None 
+ERROR - 2021-06-23 13:53:51,874 - root - string indices must be integers in Thread update word dict None 
+ERROR - 2021-06-23 13:53:51,874 - root - string indices must be integers in Thread update word dict None 
+ERROR - 2021-06-23 13:53:51,874 - root - string indices must be integers in Thread update word dict None 
+ERROR - 2021-06-23 13:53:51,874 - root - string indices must be integers in Thread update word dict None 
+ERROR - 2021-06-23 13:53:51,874 - root - string indices must be integers in Thread update word dict None 
+ERROR - 2021-06-23 13:53:51,874 - root - string indices must be integers in Thread update word dict None 
+ERROR - 2021-06-23 13:53:51,874 - root - string indices must be integers in Thread update word dict None 
+ERROR - 2021-06-23 13:53:51,874 - root - string indices must be integers in Thread update word dict None 
+ERROR - 2021-06-23 13:53:51,874 - root - string indices must be integers in Thread update word dict None 
+ERROR - 2021-06-23 13:53:51,874 - root - string indices must be integers in Thread update word dict None 
+ERROR - 2021-06-23 13:53:51,874 - root - string indices must be integers in Thread update word dict None 
+ERROR - 2021-06-23 13:53:51,874 - root - string indices must be integers in Thread update word dict None 
+ERROR - 2021-06-23 13:53:51,874 - root - string indices must be integers in Thread update word dict None 
+ERROR - 2021-06-23 13:53:51,874 - root - string indices must be integers in Thread update word dict None 
+ERROR - 2021-06-23 13:53:51,874 - root - string indices must be integers in Thread update word dict None 
+ERROR - 2021-06-23 13:53:51,874 - root - string indices must be integers in Thread update word dict None 
+ERROR - 2021-06-23 13:53:51,874 - root - string indices must be integers in Thread update word dict None 
+ERROR - 2021-06-23 13:53:51,874 - root - string indices must be integers in Thread update word dict None 
+ERROR - 2021-06-23 13:53:51,874 - root - string indices must be integers in Thread update word dict None 
+ERROR - 2021-06-23 13:53:51,874 - root - string indices must be integers in Thread update word dict None 
+ERROR - 2021-06-23 13:53:51,874 - root - string indices must be integers in Thread update word dict None 
+ERROR - 2021-06-23 13:53:51,874 - root - string indices must be integers in Thread update word dict None 
+ERROR - 2021-06-23 13:53:51,874 - root - string indices must be integers in Thread update word dict None 
+ERROR - 2021-06-23 13:53:51,874 - root - string indices must be integers in Thread update word dict None 
+ERROR - 2021-06-23 13:53:51,874 - root - string indices must be integers in Thread update word dict None 
+ERROR - 2021-06-23 13:53:51,874 - root - string indices must be integers in Thread update word dict None 
+ERROR - 2021-06-23 13:53:51,874 - root - string indices must be integers in Thread update word dict None 
+ERROR - 2021-06-23 13:53:51,874 - root - string indices must be integers in Thread update word dict None 
+ERROR - 2021-06-23 13:53:51,874 - root - string indices must be integers in Thread update word dict None 
+ERROR - 2021-06-23 13:53:51,874 - root - string indices must be integers in Thread update word dict None 
+ERROR - 2021-06-23 13:53:51,874 - root - list index out of range in Thread update word dict None 
+ERROR - 2021-06-23 13:53:51,874 - root - list index out of range in Thread update word dict None 
+ERROR - 2021-06-23 13:53:51,874 - root - list index out of range in Thread update word dict None 
+ERROR - 2021-06-23 13:53:51,874 - root - string indices must be integers in Thread update word dict None 
+ERROR - 2021-06-23 13:53:51,874 - root - string indices must be integers in Thread update word dict None 
+ERROR - 2021-06-23 13:53:51,874 - root - string indices must be integers in Thread update word dict None 
+ERROR - 2021-06-23 13:53:51,874 - root - string indices must be integers in Thread update word dict None 
+ERROR - 2021-06-23 13:53:51,874 - root - string indices must be integers in Thread update word dict None 
+ERROR - 2021-06-23 13:53:51,874 - root - string indices must be integers in Thread update word dict None 
+ERROR - 2021-06-23 13:53:51,874 - root - string indices must be integers in Thread update word dict None 
+ERROR - 2021-06-23 13:53:51,874 - root - string indices must be integers in Thread update word dict None 
+ERROR - 2021-06-23 13:53:51,874 - root - string indices must be integers in Thread update word dict None 
+ERROR - 2021-06-23 13:53:51,874 - root - string indices must be integers in Thread update word dict None 
+ERROR - 2021-06-23 13:53:51,874 - root - string indices must be integers in Thread update word dict None 
+ERROR - 2021-06-23 13:53:51,874 - root - string indices must be integers in Thread update word dict None 
+ERROR - 2021-06-23 13:53:51,874 - root - string indices must be integers in Thread update word dict None 
+ERROR - 2021-06-23 13:53:51,874 - root - string indices must be integers in Thread update word dict None 
+ERROR - 2021-06-23 13:53:51,874 - root - string indices must be integers in Thread update word dict None 
+ERROR - 2021-06-23 13:53:51,889 - root - string indices must be integers in Thread update word dict None 
+ERROR - 2021-06-23 13:53:51,889 - root - string indices must be integers in Thread update word dict None 
+ERROR - 2021-06-23 13:53:51,889 - root - string indices must be integers in Thread update word dict None 
+ERROR - 2021-06-23 13:53:51,889 - root - string indices must be integers in Thread update word dict None 
+ERROR - 2021-06-23 13:53:51,889 - root - string indices must be integers in Thread update word dict None 
+ERROR - 2021-06-23 13:53:51,889 - root - string indices must be integers in Thread update word dict None 
+ERROR - 2021-06-23 13:53:51,890 - root - string indices must be integers in Thread update word dict None 
+ERROR - 2021-06-23 13:53:51,890 - root - string indices must be integers in Thread update word dict None 
+ERROR - 2021-06-23 13:53:51,890 - root - string indices must be integers in Thread update word dict None 
+ERROR - 2021-06-23 13:53:51,890 - root - list index out of range in Thread update word dict None 
+ERROR - 2021-06-23 13:53:51,891 - root - string indices must be integers in Thread update word dict None 
+ERROR - 2021-06-23 13:53:51,891 - root - string indices must be integers in Thread update word dict None 
+ERROR - 2021-06-23 13:53:51,891 - root - string indices must be integers in Thread update word dict None 
+ERROR - 2021-06-23 13:53:51,891 - root - list index out of range in Thread update word dict None 
+ERROR - 2021-06-23 13:53:51,891 - root - string indices must be integers in Thread update word dict None 
+ERROR - 2021-06-23 13:53:51,891 - root - string indices must be integers in Thread update word dict None 
+ERROR - 2021-06-23 13:53:51,891 - root - string indices must be integers in Thread update word dict None 
+ERROR - 2021-06-23 13:53:51,891 - root - string indices must be integers in Thread update word dict None 
+ERROR - 2021-06-23 13:53:51,891 - root - string indices must be integers in Thread update word dict None 
+ERROR - 2021-06-23 13:53:51,891 - root - string indices must be integers in Thread update word dict None 
+ERROR - 2021-06-23 13:53:51,891 - root - string indices must be integers in Thread update word dict None 
+ERROR - 2021-06-23 13:53:51,891 - root - string indices must be integers in Thread update word dict None 
+ERROR - 2021-06-23 13:53:51,891 - root - string indices must be integers in Thread update word dict None 
+ERROR - 2021-06-23 13:53:51,891 - root - string indices must be integers in Thread update word dict None 
+ERROR - 2021-06-23 13:53:51,891 - root - string indices must be integers in Thread update word dict None 
+ERROR - 2021-06-23 13:53:51,891 - root - string indices must be integers in Thread update word dict None 
+ERROR - 2021-06-23 13:53:51,891 - root - string indices must be integers in Thread update word dict None 
+ERROR - 2021-06-23 13:53:51,891 - root - string indices must be integers in Thread update word dict None 
+ERROR - 2021-06-23 13:53:51,891 - root - string indices must be integers in Thread update word dict None 
+ERROR - 2021-06-23 13:53:51,891 - root - string indices must be integers in Thread update word dict None 
+ERROR - 2021-06-23 13:53:51,891 - root - string indices must be integers in Thread update word dict None 
+ERROR - 2021-06-23 13:53:51,891 - root - string indices must be integers in Thread update word dict None 
+ERROR - 2021-06-23 13:53:51,891 - root - string indices must be integers in Thread update word dict None 
+ERROR - 2021-06-23 13:53:51,891 - root - string indices must be integers in Thread update word dict None 
+ERROR - 2021-06-23 13:53:51,891 - root - string indices must be integers in Thread update word dict None 
+ERROR - 2021-06-23 13:53:51,891 - root - string indices must be integers in Thread update word dict None 
+ERROR - 2021-06-23 13:53:51,891 - root - string indices must be integers in Thread update word dict None 
+ERROR - 2021-06-23 13:53:51,891 - root - string indices must be integers in Thread update word dict None 
+ERROR - 2021-06-23 13:53:51,891 - root - string indices must be integers in Thread update word dict None 
+ERROR - 2021-06-23 13:53:51,891 - root - string indices must be integers in Thread update word dict None 
+ERROR - 2021-06-23 13:53:51,891 - root - string indices must be integers in Thread update word dict None 
+ERROR - 2021-06-23 13:53:51,891 - root - string indices must be integers in Thread update word dict None 
+ERROR - 2021-06-23 13:53:51,891 - root - string indices must be integers in Thread update word dict None 
+ERROR - 2021-06-23 13:53:51,891 - root - string indices must be integers in Thread update word dict None 
+ERROR - 2021-06-23 13:53:51,891 - root - string indices must be integers in Thread update word dict None 
+ERROR - 2021-06-23 13:53:51,891 - root - string indices must be integers in Thread update word dict None 
+ERROR - 2021-06-23 13:53:51,891 - root - string indices must be integers in Thread update word dict None 
+ERROR - 2021-06-23 13:53:51,891 - root - string indices must be integers in Thread update word dict None 
+ERROR - 2021-06-23 13:53:51,891 - root - string indices must be integers in Thread update word dict None 
+ERROR - 2021-06-23 13:53:51,891 - root - string indices must be integers in Thread update word dict None 
+ERROR - 2021-06-23 13:53:51,891 - root - string indices must be integers in Thread update word dict None 
+ERROR - 2021-06-23 13:53:51,891 - root - string indices must be integers in Thread update word dict None 
+ERROR - 2021-06-23 13:53:51,891 - root - string indices must be integers in Thread update word dict None 
+ERROR - 2021-06-23 13:53:51,891 - root - list index out of range in Thread update word dict None 
