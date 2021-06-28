@@ -55,4 +55,4 @@ $ python main.py
 - ### NOTE
     - Inspite of having subtitle in title of project `we can run this on any text file`.
 
-<center> <h1>&#12485; Good Day Fellas &#1578;</h1> </center>
+<h1 align="center">&#12485; Good Day Fellas &#1578;</h1>
