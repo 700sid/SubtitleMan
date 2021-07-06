@@ -1,7 +1,6 @@
 ../test.py
 src\temp.srt
 src\__pycache__
-*.pyc
 *.log
 *.srt
 *.pyc
