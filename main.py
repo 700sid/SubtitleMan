@@ -76,7 +76,7 @@ def update_word_dict(file):
             if meaning != 'Nan':
                 meaning = meaning.split(';')
                 word_to_write[word] = meaning  # writing to dictionary
-                
+
         sg.OneLineProgressMeter('Getting Meanings', i, size, grab_anywhere=True)  # fun's anomaly
 
         with open(f'{filename}-summary.txt', mode='w', encoding='utf-8-sig') as f:
@@ -86,7 +86,7 @@ def update_word_dict(file):
                             for line in word_to_write[word]:
                                 f.write(f'    {line}\n')
                             f.write('\n\n\n')
-    
+
             sg.Popup('Summary File Write Successful', auto_close=True, auto_close_duration=1)
 
         with open(f'{filename}.subtitle-man.srt', mode='w', encoding='utf-8-sig') as f:
@@ -135,10 +135,35 @@ def file_reader(filename_local):
         return None, None
 
 
+def subtitle_login():
+    global user_token
+    url = "https://api.opensubtitles.com/api/v1/login"
+
+    payload = {'username': values['-USERNAME OPENSUBTITLES-'],
+               'password': values['-PASSWORD OPENSUBTITLES-']}
+    files = [
+
+    ]
+    headers = {
+        'Api-key': api_key
+    }
+
+    response = requests.request("POST", url, headers=headers, data=payload, files=files)
+
+    if 'message' not in response.json():
+        user_token = response.json()['token']
+        sg.Popup('Login Successful')
+        print(user_token)
+    else:
+        sg.PopupError(response.json()['message'])
+
+
 if __name__ == '__main__':
     # Default Variable
     file = None
     lang = enchant.Dict("en_US")
+    user_token = None
+    list_subtitles = None
     common_words = EW.get_common_word()  # List of common words
     sg.theme('DarkGrey14')
     logging.basicConfig(filename="src/info.log", level=logging.NOTSET,
@@ -217,7 +242,7 @@ if __name__ == '__main__':
         ]
     ]
 
-    layout = [
+    layout_left = [
         [
             sg.Frame('Hello', layout=head_layout, element_justification='c')
         ],
@@ -235,6 +260,65 @@ if __name__ == '__main__':
         ]
     ]
 
+    api_key_layout = [
+        [
+            sg.In('Enter OpenSubtitles API key', key='-OPEN SUBTITLE KEY-'),
+            sg.OK()
+        ],
+        [
+            sg.Text('https://www.opensubtitles.com/consumers'),
+        ]
+    ]
+
+    login = [
+        [
+            sg.Text('Login id :', size=(8, 1)),
+            sg.In('', key='-USERNAME OPENSUBTITLES-', size=(30, 1)),
+        ],
+        [
+            sg.Text('Password:', size=(8, 1)),
+            sg.In('', key='-PASSWORD OPENSUBTITLES-', size=(30, 1), password_char='*')
+        ],
+        [
+            sg.Button('Login', key='-LOGIN OPENSUBTITLES-')
+        ]
+    ]
+
+    layout_right = [
+        [
+            sg.Text('Download Subtitle')
+        ],
+        [
+            sg.Frame('Login', layout=login)
+        ],
+        [
+            sg.In('Enter Subtitle\'s name', key='-SUBTITLE NAME-')
+        ],
+        [
+            sg.Button('Search', key='-SUBTITLE SEARCH-')
+        ],
+        [
+            sg.Listbox(key='-SUBTITLE LIST-', values=[], size=(40, 10))
+        ],
+        [
+            sg.Button('Download', key='-DOWNLOAD SUBTITLE-')
+        ],
+
+    ]
+
+    with open('key.txt', mode='r') as f:
+        api_key = f.read()
+        if not api_key:
+            layout_right.extend(api_key_layout)
+
+    layout = [
+        [
+            sg.Column(layout_left),
+            sg.VSeparator(),
+            sg.Column(layout_right)
+         ]
+    ]
+
     window = sg.Window(title='Subtitle Man', layout=layout, element_justification='c',
                        margins=(10, 10), enable_close_attempted_event=True)
 
@@ -242,6 +326,17 @@ if __name__ == '__main__':
         event, values = window()
         print(event, values)
         if event == sg.WINDOW_CLOSE_ATTEMPTED_EVENT and sg.popup_yes_no('Do you really want to exit?') == 'Yes':
+            if user_token:
+                url = "https://api.opensubtitles.com/api/v1/logout"
+
+                payload = {}
+                headers = {
+                    'Authorization': user_token,
+                    'Api-key': api_key
+                }
+
+                response = requests.request("DELETE", url, headers=headers, data=payload)
+                print(response.text)
             break
         if event == '-IMPORT-':
             # Just import file and take his name and list of line as result
@@ -302,5 +397,58 @@ if __name__ == '__main__':
             except Exception as es:
                 logging.error(f'{es} in -DICTIONARY SEARCH-')
                 sg.popup_error(f'{es}\n\n"Try righting single word"')
+
+        if event == '-LOGIN OPENSUBTITLES-':
+            try:
+                subtitle_login()
+            except Exception as ex:
+                logging.error(f'{ex} in -LOGIN OPENSUBTITLES-')
+
+        if event == '-SUBTITLE SEARCH-':
+            url = f"https://api.opensubtitles.com/api/v1/subtitles?query={values['-SUBTITLE NAME-']}&languages=en"
+
+            payload = {}
+            headers = {
+                'Api-key': api_key
+            }
+
+            response = requests.request("GET", url, headers=headers, data=payload)
+
+            list_subtitles = {value["attributes"]["release"]: value['id'] for value in response.json()['data']}
+            window['-SUBTITLE LIST-'].update(list_subtitles.keys())
+
+        if event == '-DOWNLOAD SUBTITLE-':
+            try:
+                print(values['-SUBTITLE LIST-'])
+                url = "https://api.opensubtitles.com/api/v1/download"
+
+                payload = json.dumps({
+                    "file_id": list_subtitles[values['-SUBTITLE LIST-'][0]],
+                    "file_name": values['-SUBTITLE LIST-'][0],
+                    # "strip_html": True,
+                    # "cleanup_links": True,
+                    # "remove_adds": True,
+                    # "in_fps": 0,
+                    # "out_fps": 0,
+                    # "timeshift": 0
+                })
+                headers = {
+                    'Authorization': user_token,
+                    'Content-Type': 'application/json',
+                    'Api-key': api_key
+                }
+
+                response = requests.request("POST", url, headers=headers, data=payload)
+                response = response.json()
+                print(response)
+
+                downloaded_subtitle_file = requests.request('GET', url=response['link']).text
+                print(downloaded_subtitle_file)
+                download_location = sg.popup_get_folder('Select Folder')
+                with open(f"{download_location}/{values['-SUBTITLE LIST-'][0]}.srt", mode='w',
+                          encoding='utf-8-sig') as f:
+                    f.write(downloaded_subtitle_file)
+            except Exception as es:
+                sg.PopupError(es)
 
     window.close()
