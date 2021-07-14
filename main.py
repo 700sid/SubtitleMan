@@ -262,36 +262,45 @@ if __name__ == '__main__':
 
     api_key_layout = [
         [
+            sg.Text('Use:')
+        ],
+        [
+            sg.Text('https://www.opensubtitles.com/consumers'),
+        ],
+        [
+            sg.Text('for API Key')
+        ],
+        [
             sg.In('Enter OpenSubtitles API key', key='-OPEN API KEY-')
         ],
         [
             sg.Button('ADD API KEY', key='-ADD API KEY-')
-        ],
-        [
-            sg.Text('https://www.opensubtitles.com/consumers'),
         ]
     ]
 
     login = [
         [
+            sg.Text('opensubtitles.com', font=('Franklin Gothic Book', 16))
+        ],
+        [
+            sg.Text('Download Subtitles', font=('Franklin Gothic Book', 9))
+        ],
+        [
             sg.Text('Login id :', size=(8, 1)),
-            sg.In('', key='-USERNAME OPENSUBTITLES-', size=(30, 1)),
+            sg.In('', key='-USERNAME OPENSUBTITLES-', size=(34, 1)),
         ],
         [
             sg.Text('Password:', size=(8, 1)),
-            sg.In('', key='-PASSWORD OPENSUBTITLES-', size=(30, 1), password_char='*')
+            sg.In('', key='-PASSWORD OPENSUBTITLES-', size=(34, 1), password_char='*')
         ],
         [
             sg.Button('Login', key='-LOGIN OPENSUBTITLES-')
         ]
     ]
 
-    layout_right = [
+    download_subtitle_layout = [
         [
-            sg.Text('Download Subtitle')
-        ],
-        [
-            sg.Frame('Login', layout=login)
+            sg.Text('Search For Subtitles', font=('Franklin Gothic Book', 12))
         ],
         [
             sg.In('Enter Subtitle\'s name', key='-SUBTITLE NAME-')
@@ -300,24 +309,35 @@ if __name__ == '__main__':
             sg.Button('Search', key='-SUBTITLE SEARCH-')
         ],
         [
-            sg.Listbox(key='-SUBTITLE LIST-', values=[], size=(40, 10))
+            sg.Text('Subtitle list', font=('Franklin Gothic Book', 12))
+        ],
+        [
+            sg.Listbox(key='-SUBTITLE LIST-', values=[], size=(40, 16))
         ],
         [
             sg.Button('Download', key='-DOWNLOAD SUBTITLE-')
-        ],
+        ]
+    ]
 
+    layout_right = [
+        [
+            sg.Frame('Login', layout=login, element_justification='c')
+        ],
+        [
+            sg.Frame('Download', layout=download_subtitle_layout, element_justification='c')
+        ]
     ]
 
     with open('key.txt', mode='r') as f:
         api_key = f.read()
         if not api_key:
-            layout_right.extend(api_key_layout)
+            layout_right.extend([[sg.Frame('API Key Config', layout=api_key_layout)]])
 
     layout = [
         [
             sg.Column(layout_left),
             sg.VSeparator(),
-            sg.Column(layout_right)
+            sg.Column(layout_right, vertical_alignment='top')
          ]
     ]
 
@@ -458,7 +478,9 @@ if __name__ == '__main__':
             try:
                 with open('key.txt', 'w') as api_file:
                     api_file.write(values['-OPEN API KEY-'])
-                    sg.Popup('Key write Successful')
+                    sg.Popup("Key write Successful \
+                    \nNext time you restart this section will be removed. \
+                    \nIf You want to edit again delete key.txt file""")
                 api_key = values['-OPEN API KEY-']
             except Exception as es:
                 login.error(f'{es} in -ADD API KEY-')
