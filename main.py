@@ -262,8 +262,10 @@ if __name__ == '__main__':
 
     api_key_layout = [
         [
-            sg.In('Enter OpenSubtitles API key', key='-OPEN SUBTITLE KEY-'),
-            sg.OK()
+            sg.In('Enter OpenSubtitles API key', key='-OPEN API KEY-')
+        ],
+        [
+            sg.Button('ADD API KEY', key='-ADD API KEY-')
         ],
         [
             sg.Text('https://www.opensubtitles.com/consumers'),
@@ -448,7 +450,17 @@ if __name__ == '__main__':
                 with open(f"{download_location}/{values['-SUBTITLE LIST-'][0]}.srt", mode='w',
                           encoding='utf-8-sig') as f:
                     f.write(downloaded_subtitle_file)
+                sg.Popup('File Download Successful')
             except Exception as es:
                 sg.PopupError(es)
+
+        if event == '-ADD API KEY-':
+            try:
+                with open('key.txt', 'w') as api_file:
+                    api_file.write(values['-OPEN API KEY-'])
+                    sg.Popup('Key write Successful')
+                api_key = values['-OPEN API KEY-']
+            except Exception as es:
+                login.error(f'{es} in -ADD API KEY-')
 
     window.close()
